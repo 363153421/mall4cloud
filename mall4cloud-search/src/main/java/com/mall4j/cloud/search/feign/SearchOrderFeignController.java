@@ -25,10 +25,9 @@ public class SearchOrderFeignController implements SearchOrderFeignClient {
 
     @Override
     public ServerResponseEntity<EsPageVO<EsOrderVO>> getOrderPage(OrderSearchDTO orderSearch) {
-//        EsPageDTO pageDTO = new EsPageDTO();
-//        pageDTO.setPageNum(orderSearch.getPageNum());
-//        pageDTO.setPageSize(orderSearch.getPageSize());
-//        return ServerResponseEntity.success(orderSearchManager.pageSearchResult(pageDTO, orderSearch));
-        return ServerResponseEntity.success(new EsPageVO<>());
+        EsPageDTO pageDTO = new EsPageDTO();
+        pageDTO.setPageNum(orderSearch.getPageNum());
+        pageDTO.setPageSize(orderSearch.getPageSize());
+        return ServerResponseEntity.success(orderSearchManager.pageSearchResult(pageDTO, orderSearch));
     }
 }
