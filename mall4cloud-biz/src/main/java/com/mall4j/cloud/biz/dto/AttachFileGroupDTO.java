@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * DTO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-12-04 16:15:02
  */
 public class AttachFileGroupDTO{

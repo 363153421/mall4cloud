@@ -6,7 +6,7 @@ import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Component;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/09/03
  */
 @Component

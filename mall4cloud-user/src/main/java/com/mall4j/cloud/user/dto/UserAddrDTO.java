@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.Length;
 /**
  * 用户地址DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-07 15:50:02
  */
 public class UserAddrDTO {

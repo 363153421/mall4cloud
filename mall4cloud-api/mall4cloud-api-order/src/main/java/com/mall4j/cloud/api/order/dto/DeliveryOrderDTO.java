@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 订单快递信息DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-07 15:10:00
  */
 public class DeliveryOrderDTO{

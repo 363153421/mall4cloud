@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021-02-03 15:47:32
  */
 public class CheckShopCartItemDTO {

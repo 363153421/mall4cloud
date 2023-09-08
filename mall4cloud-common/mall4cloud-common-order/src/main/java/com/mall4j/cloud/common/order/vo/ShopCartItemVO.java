@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-20 15:47:32
  */
 public class ShopCartItemVO implements Serializable {

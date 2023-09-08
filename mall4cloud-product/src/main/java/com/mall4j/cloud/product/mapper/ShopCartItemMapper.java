@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 购物车
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-21 10:01:23
  */
 public interface ShopCartItemMapper {

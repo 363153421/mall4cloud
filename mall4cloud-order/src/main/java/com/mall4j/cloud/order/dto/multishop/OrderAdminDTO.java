@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 /**
  * 订单参数
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
 public class OrderAdminDTO {

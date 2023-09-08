@@ -3,7 +3,7 @@ package com.mall4j.cloud.api.rbac.bo;
 /**
  * uri权限bo
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/3
  */
 public class UriPermissionBO {

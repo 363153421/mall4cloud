@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Component
 @RocketMQMessageListener(topic = RocketMqConstant.ORDER_CANCEL_TOPIC,consumerGroup = RocketMqConstant.ORDER_CANCEL_TOPIC)

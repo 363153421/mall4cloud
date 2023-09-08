@@ -2,7 +2,7 @@ package com.mall4j.cloud.api.order.constant;
 
 /**
  * 配送类型
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 public enum DeliveryType {
 

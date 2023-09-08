@@ -5,7 +5,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 轮播图
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-24 16:38:32
  */
 public class IndexImg extends BaseModel implements Serializable{

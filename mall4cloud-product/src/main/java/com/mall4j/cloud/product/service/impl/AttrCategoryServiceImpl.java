@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 属性与属性分组关联信息
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-23 16:20:01
  */
 @Service

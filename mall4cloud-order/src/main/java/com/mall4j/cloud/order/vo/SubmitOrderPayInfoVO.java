@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 提交订单的支付信息
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/2/4
  */
 public class SubmitOrderPayInfoVO {

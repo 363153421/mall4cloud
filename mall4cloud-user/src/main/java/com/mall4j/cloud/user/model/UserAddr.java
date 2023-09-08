@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 用户地址
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-07 15:50:02
  */
 public class UserAddr extends BaseModel implements Serializable{

@@ -6,7 +6,7 @@ import cn.throwx.canal.gule.common.FieldNamingPolicy;
 /**
  * 商品信息
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-12-23 15:27:24
  */
 @CanalModel(database = "mall4cloud_product", table = "spu", fieldNamingPolicy = FieldNamingPolicy.LOWER_UNDERSCORE)

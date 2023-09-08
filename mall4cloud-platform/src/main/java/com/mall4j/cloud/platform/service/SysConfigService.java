@@ -5,7 +5,7 @@ import com.mall4j.cloud.platform.model.SysConfig;
 /**
  * 系统配置信息表
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-23 16:27:57
  */
 public interface SysConfigService {

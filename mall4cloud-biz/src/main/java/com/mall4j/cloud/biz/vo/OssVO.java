@@ -3,7 +3,7 @@ package com.mall4j.cloud.biz.vo;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/12
  */
 public class OssVO {

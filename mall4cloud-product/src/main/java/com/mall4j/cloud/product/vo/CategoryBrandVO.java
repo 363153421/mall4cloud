@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 品牌分类关联信息VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class CategoryBrandVO extends BaseVO{

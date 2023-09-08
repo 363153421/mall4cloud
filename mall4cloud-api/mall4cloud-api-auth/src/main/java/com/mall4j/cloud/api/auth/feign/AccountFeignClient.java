@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/22
  */
 @FeignClient(value = "mall4cloud-auth",contextId ="account")

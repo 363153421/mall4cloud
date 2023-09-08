@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /**
  * 商品搜索feign连接
- * @author YXF
+ * @author wuKeFan
  * @date 2020/12/07
  */
 @RestController

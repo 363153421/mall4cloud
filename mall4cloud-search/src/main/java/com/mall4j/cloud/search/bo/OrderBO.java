@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 商品信息
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-12-23 15:27:24
  */
 @CanalModel(database = "mall4cloud_order", table = "order", fieldNamingPolicy = FieldNamingPolicy.LOWER_UNDERSCORE)

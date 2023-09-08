@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/16
  */
 public class ProductSearchDTO {

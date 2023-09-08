@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 订单支付成功通知
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/8
  */
 public class PayNotifyBO {

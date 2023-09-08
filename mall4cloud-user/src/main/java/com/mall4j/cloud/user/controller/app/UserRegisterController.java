@@ -21,7 +21,7 @@ import javax.validation.Valid;
 
 /**
  * 用户信息
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @RestController
 @RequestMapping("/ua/user/register")

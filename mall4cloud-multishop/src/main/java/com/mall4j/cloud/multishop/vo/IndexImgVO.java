@@ -9,7 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 轮播图VO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-24 16:38:32
  */
 public class IndexImgVO extends BaseVO{

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 库存信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-11 13:49:06
  */
 public class SkuStock extends BaseModel implements Serializable{

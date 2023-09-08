@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 /**
  * sku信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-08 15:54:22
  */
 public class Sku extends BaseModel implements Serializable{

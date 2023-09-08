@@ -6,7 +6,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/22
  */
 public class SkuStockLockDTO {

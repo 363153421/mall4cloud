@@ -22,9 +22,7 @@ import org.springframework.context.annotation.Primary;
 import java.util.Map;
 
 /**
- * @author throwable
- * @version v1
- * @description
+ * @author wuKeFan
  * @since 2020/9/20 17:05
  */
 @Configuration

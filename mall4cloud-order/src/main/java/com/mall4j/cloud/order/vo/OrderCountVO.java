@@ -3,7 +3,7 @@ package com.mall4j.cloud.order.vo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Schema(description = "我的订单数量")
 public class OrderCountVO {

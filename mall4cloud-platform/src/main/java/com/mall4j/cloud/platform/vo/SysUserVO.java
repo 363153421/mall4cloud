@@ -7,7 +7,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/9/2
  */
 public class SysUserVO {

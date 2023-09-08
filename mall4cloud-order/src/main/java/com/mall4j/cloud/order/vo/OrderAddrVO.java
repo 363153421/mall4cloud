@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 用户订单配送地址VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 14:13:50
  */
 public class OrderAddrVO extends BaseVO{

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/21
  */
 @RequestMapping(value = "/sys_user")

@@ -3,7 +3,7 @@ package com.mall4j.cloud.leaf.common;
 import com.mall4j.cloud.leaf.IDGen;
 
 /**
- * @author left
+ * @author wuKeFan
  */
 public class ZeroIDGen implements IDGen {
 

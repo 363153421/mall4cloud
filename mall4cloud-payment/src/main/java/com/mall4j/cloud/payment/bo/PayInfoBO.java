@@ -1,7 +1,7 @@
 package com.mall4j.cloud.payment.bo;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/25
  */
 public class PayInfoBO {

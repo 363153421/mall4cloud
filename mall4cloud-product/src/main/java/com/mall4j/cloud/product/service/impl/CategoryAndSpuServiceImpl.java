@@ -22,7 +22,7 @@ import java.util.Objects;
 /**
  * 分类及商品的关联处理信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 @Service

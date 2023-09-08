@@ -6,7 +6,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 热搜
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2021-01-27 09:10:00
  */
 public class HotSearch extends BaseModel implements Serializable{

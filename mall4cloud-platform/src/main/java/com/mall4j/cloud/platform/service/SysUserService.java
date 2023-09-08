@@ -9,7 +9,7 @@ import com.mall4j.cloud.platform.vo.SysUserVO;
 import java.util.List;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/22
  */
 public interface SysUserService {

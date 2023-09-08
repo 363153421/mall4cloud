@@ -17,7 +17,7 @@ import java.util.Objects;
 /**
  * 系统配置信息表
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-23 16:27:57
  */
 @Service

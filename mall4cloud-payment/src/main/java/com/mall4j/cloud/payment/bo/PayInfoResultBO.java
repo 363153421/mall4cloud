@@ -2,7 +2,7 @@ package com.mall4j.cloud.payment.bo;
 
 /**
  * 支付后返回的一些基础数据
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/25
  */
 public class PayInfoResultBO {

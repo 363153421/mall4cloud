@@ -5,7 +5,7 @@ import com.mall4j.cloud.common.serializer.ImgJsonSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/17
  */
 public class ShopInfoSearchVO {

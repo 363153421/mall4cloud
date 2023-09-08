@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import javax.sql.DataSource;
 
 /**
- * @author left
+ * @author wuKeFan
  */
 @Service("SegmentService")
 public class SegmentService {

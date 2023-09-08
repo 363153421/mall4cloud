@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 订单项
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
 public class OrderItem extends BaseModel implements Serializable{

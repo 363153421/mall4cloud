@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * 购物车
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-21 10:01:23
  */
 public class ShopCartItem extends BaseModel implements Serializable{

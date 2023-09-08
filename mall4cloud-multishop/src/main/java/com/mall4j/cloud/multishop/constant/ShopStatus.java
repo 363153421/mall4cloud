@@ -3,7 +3,7 @@ package com.mall4j.cloud.multishop.constant;
 /**
  * 店铺状态
  *
- * @author YXF
+ * @author wuKeFan
  */
 public enum ShopStatus {
 

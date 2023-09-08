@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Objects;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/6/29 18:39
  */
 @RequestMapping(value = "/ua/shop_detail")

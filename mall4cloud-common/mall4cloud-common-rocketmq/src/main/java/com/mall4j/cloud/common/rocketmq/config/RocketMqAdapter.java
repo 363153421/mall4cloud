@@ -9,7 +9,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/3/30
  */
 @RefreshScope

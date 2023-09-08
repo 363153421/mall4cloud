@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.Objects;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/6/30 9:37
  */
 @RequestMapping(value = "/my_shop_detail")

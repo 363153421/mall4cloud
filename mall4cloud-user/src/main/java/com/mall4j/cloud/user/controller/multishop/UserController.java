@@ -17,7 +17,7 @@ import javax.validation.Valid;
 /**
  * 用户表
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-12-08 11:18:04
  */
 @RestController("multishopUserController")

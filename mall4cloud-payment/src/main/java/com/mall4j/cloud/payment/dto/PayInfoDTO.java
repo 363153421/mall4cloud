@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 订单支付记录DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-25 09:50:59
  */
 public class PayInfoDTO{

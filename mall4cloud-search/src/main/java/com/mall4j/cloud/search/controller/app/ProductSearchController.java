@@ -25,7 +25,7 @@ import java.util.Objects;
 
 /**
  * 商品搜索
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/16
  */
 @RestController("appSearchSpuController")

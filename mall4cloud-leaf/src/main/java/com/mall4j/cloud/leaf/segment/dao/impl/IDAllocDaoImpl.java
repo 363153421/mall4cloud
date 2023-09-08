@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 import java.util.List;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public class IDAllocDaoImpl implements IDAllocDao {
 

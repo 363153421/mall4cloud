@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 系统配置信息表DTO
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-23 16:27:57
  */
 public class SysConfigDTO{

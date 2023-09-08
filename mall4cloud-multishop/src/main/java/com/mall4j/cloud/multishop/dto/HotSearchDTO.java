@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 热搜DTO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2021-01-27 09:10:00
  */
 public class HotSearchDTO{

@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/7/11
  */
 public class RedisUtil {

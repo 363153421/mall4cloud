@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 分类信息VO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-1-05 15:37:24
  */
 public class CategorySearchVO{

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/6/24 14:46
  */
 @RequestMapping(value = "/m/shop_detail")

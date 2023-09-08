@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/9/8
  */
 public class SysUserDTO {

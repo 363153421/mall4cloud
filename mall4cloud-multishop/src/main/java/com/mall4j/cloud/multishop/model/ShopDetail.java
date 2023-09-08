@@ -6,7 +6,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 店铺详情
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 15:50:25
  */
 public class ShopDetail extends BaseModel implements Serializable{

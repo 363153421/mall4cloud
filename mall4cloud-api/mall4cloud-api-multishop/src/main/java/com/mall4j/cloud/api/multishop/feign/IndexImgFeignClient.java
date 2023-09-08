@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/7/8 11:10
  */
 @FeignClient(value = "mall4cloud-multishop",contextId = "indexImg")

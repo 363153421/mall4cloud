@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 订单项VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
 public class OrderItemDTO extends BaseVO{

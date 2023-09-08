@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.stereotype.Component;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/27
  */
 @Component

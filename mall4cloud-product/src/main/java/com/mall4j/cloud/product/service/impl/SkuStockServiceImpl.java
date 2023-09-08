@@ -17,7 +17,7 @@ import java.util.Objects;
 /**
  * 库存信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 @Service

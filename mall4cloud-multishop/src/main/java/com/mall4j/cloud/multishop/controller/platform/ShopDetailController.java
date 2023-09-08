@@ -22,7 +22,7 @@ import java.util.Objects;
 /**
  * 店铺详情
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 15:50:25
  */
 @RestController("platformShopDetailController")

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 用户订单配送地址
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 14:13:50
  */
 public class OrderAddr extends BaseModel implements Serializable{

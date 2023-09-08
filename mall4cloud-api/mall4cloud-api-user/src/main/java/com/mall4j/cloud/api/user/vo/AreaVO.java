@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 省市区地区信息VO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-25 15:16:14
  */
 public class AreaVO extends BaseVO{

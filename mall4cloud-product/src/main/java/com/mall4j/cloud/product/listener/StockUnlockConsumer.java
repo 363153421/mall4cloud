@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 解锁库存的监听
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Component
 @RocketMQMessageListener(topic = RocketMqConstant.STOCK_UNLOCK_TOPIC,consumerGroup = RocketMqConstant.STOCK_UNLOCK_TOPIC)

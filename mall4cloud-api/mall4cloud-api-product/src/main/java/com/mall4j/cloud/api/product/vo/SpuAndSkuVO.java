@@ -3,7 +3,7 @@ package com.mall4j.cloud.api.product.vo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/8
  */
 public class SpuAndSkuVO {

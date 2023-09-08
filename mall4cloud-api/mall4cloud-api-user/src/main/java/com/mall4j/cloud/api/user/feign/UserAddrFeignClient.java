@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 用户地址feign连接
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/07
  */
 @FeignClient(value = "mall4cloud-user",contextId = "userAddr")

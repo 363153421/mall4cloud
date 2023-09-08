@@ -16,7 +16,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public class SegmentIDGenImpl implements IDGen {
 

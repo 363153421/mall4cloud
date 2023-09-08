@@ -2,8 +2,8 @@ package com.mall4j.cloud.api.auth.constant;
 
 /**
  * 系统类型
- * @author FrozenWatermelon
- * @date 2020/7/2
+ * @author wuKeFan
+ * @date 2023-09-08 16:13:30
  */
 public enum SysTypeEnum {
 

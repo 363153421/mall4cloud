@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 /**
  * 店铺详情DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 15:50:25
  */
 public class ShopDetailDTO{

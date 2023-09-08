@@ -6,7 +6,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 系统配置信息表
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-23 16:27:57
  */
 public class SysConfig extends BaseModel implements Serializable{

@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * 双buffer
  *
- * @author left
+ * @author wuKeFan
  */
 public class SegmentBuffer {
 

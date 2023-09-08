@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * 店铺的头信息
- * @author LGH
+ * @author wuKeFan
  */
 public class ShopHeadInfoVO {
 

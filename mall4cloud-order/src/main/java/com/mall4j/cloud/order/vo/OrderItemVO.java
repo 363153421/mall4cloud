@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 订单项VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
 public class OrderItemVO extends BaseVO{

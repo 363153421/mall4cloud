@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 商品规格属性关联信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class SpuAttrValue extends BaseModel implements Serializable{

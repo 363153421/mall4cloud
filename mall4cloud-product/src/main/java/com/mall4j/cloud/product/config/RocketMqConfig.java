@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/3/30
  */
 @RefreshScope

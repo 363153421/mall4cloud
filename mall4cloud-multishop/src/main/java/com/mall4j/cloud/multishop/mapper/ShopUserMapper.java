@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/09/03
  */
 public interface ShopUserMapper {

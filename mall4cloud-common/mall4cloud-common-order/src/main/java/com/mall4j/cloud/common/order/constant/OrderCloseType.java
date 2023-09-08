@@ -3,7 +3,7 @@ package com.mall4j.cloud.common.order.constant;
 /**
  * 订单关闭
  *
- * @author YXF
+ * @author wuKeFan
  *  * @date 2021-01-27 09:10:00
  */
 public enum OrderCloseType {

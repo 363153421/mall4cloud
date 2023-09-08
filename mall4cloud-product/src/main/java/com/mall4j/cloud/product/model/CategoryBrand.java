@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * 品牌分类关联信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class CategoryBrand extends BaseModel implements Serializable{

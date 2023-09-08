@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/30
  */
 @Schema(description = "用户名和密码参数")

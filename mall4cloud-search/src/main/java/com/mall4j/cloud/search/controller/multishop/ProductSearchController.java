@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/6/21 10:36
  */
 @RestController("multishopSearchSpuController")

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/22
  */
 @FeignClient(value = "mall4cloud-product",contextId = "skuStockLock")

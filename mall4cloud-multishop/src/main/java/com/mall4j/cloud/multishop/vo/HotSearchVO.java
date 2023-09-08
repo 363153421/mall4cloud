@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 热搜VO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2021-01-27 09:10:00
  */
 public class HotSearchVO extends BaseVO{

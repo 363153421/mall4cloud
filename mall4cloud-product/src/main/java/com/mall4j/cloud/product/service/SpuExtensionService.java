@@ -8,7 +8,7 @@ import com.mall4j.cloud.product.vo.SpuExtensionVO;
 /**
  *
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-11 13:49:06
  */
 public interface SpuExtensionService {

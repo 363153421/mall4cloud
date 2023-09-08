@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 属性与属性分组关联信息DTO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-23 16:20:01
  */
 public class AttrCategoryDTO{

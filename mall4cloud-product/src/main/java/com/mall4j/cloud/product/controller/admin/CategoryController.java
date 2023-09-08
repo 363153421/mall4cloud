@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * 分类信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 @RestController("platformCategoryController")

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * spu信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-08 15:54:23
  */
 public class Spu extends BaseModel implements Serializable{

@@ -5,7 +5,7 @@ import com.mall4j.cloud.common.serializer.ImgJsonSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Schema(description = "我的订单-订单项")
 public class MyOrderItemVO {

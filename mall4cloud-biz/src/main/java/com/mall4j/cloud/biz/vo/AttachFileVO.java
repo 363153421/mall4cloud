@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 上传文件记录表VO
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-11-21 10:21:40
  */
 public class AttachFileVO extends BaseVO {

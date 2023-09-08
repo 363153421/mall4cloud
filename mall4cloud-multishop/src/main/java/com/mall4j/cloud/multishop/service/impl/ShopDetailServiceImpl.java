@@ -49,7 +49,7 @@ import java.util.stream.Collectors;
 /**
  * 店铺详情
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-23 16:24:29
  */
 @Service

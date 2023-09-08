@@ -3,7 +3,7 @@ package com.mall4j.cloud.common.rocketmq.config;
 /**
  * nameserver用;分割
  * 同步消息，如果两次
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/3/25
  */
 public class RocketMqConstant {

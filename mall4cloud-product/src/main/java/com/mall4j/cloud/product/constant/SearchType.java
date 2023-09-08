@@ -2,7 +2,7 @@ package com.mall4j.cloud.product.constant;
 
 /**
  * 属性的搜素类型
- * @author yxf
+ * @author wuKeFan
  * @date 2020/11/20
  */
 public enum SearchType {

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 订单支付记录
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-25 09:50:59
  */
 public interface PayInfoService {

@@ -5,7 +5,7 @@ import com.mall4j.cloud.common.response.ServerResponseEntity;
 import com.mall4j.cloud.multishop.dto.ChangeAccountDTO;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/09/03
  */
 public interface ShopUserAccountService {

@@ -3,7 +3,7 @@ package com.mall4j.cloud.user.vo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/2/25
  */
 public class UserSimpleInfoVO {

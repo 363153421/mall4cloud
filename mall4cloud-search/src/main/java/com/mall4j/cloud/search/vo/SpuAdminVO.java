@@ -3,7 +3,7 @@ package com.mall4j.cloud.search.vo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/6/21 10:38
  */
 public class SpuAdminVO {

@@ -7,7 +7,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 平台用户
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-21 14:16:34
  */
 public class SysUser extends BaseModel implements Serializable{

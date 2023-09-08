@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 /**
  * 订单支付记录
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
 public interface OrderPayInfoMapper {

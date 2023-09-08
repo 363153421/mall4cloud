@@ -3,7 +3,7 @@ package com.mall4j.cloud.api.auth.vo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/22
  */
 public class AuthAccountVO {

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 分类信息VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class CategoryVO{

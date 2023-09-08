@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 系统配置信息表VO
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020-12-23 16:27:57
  */
 public class SysConfigVO extends BaseVO{

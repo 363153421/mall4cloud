@@ -26,7 +26,7 @@ import javax.validation.Valid;
 import java.util.Objects;
 
 /**
- * @author FrozenWatermelon on 2018/09/15.
+ * @author wuKeFan on 2018/09/15.
  */
 @RestController("multishopOrderController")
 @Controller

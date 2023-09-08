@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 解锁库存的监听
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Component
 @RocketMQMessageListener(topic = RocketMqConstant.ORDER_NOTIFY_STOCK_TOPIC,consumerGroup = RocketMqConstant.ORDER_NOTIFY_STOCK_TOPIC)

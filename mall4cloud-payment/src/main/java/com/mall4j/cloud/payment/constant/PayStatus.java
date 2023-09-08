@@ -2,7 +2,7 @@ package com.mall4j.cloud.payment.constant;
 
 /**
  * 支付状态
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 public enum PayStatus {
 

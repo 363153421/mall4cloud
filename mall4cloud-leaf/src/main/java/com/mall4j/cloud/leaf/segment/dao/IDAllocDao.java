@@ -5,7 +5,7 @@ import com.mall4j.cloud.leaf.segment.model.LeafAlloc;
 import java.util.List;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public interface IDAllocDao {
 

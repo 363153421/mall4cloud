@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * es当中的商品排序
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/17
  */
 public enum EsProductSortEnum {

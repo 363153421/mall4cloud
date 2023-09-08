@@ -2,7 +2,7 @@ package com.mall4j.cloud.api.product.constant;
 
 /**
  * 等级
- * @author yxf
+ * @author wuKeFan
  * @date 2020/11/20
  */
 public enum CategoryLevel {

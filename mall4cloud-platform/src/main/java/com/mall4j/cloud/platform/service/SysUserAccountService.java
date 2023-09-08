@@ -5,7 +5,7 @@ import com.mall4j.cloud.common.response.ServerResponseEntity;
 import com.mall4j.cloud.platform.dto.ChangeAccountDTO;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/22
  */
 public interface SysUserAccountService {

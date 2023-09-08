@@ -3,7 +3,7 @@ package com.mall4j.cloud.search.constant;
 /**
  * 配置缓存名字
  *
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/30
  */
 public interface EsConstant {

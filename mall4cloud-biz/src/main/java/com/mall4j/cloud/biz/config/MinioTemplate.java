@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @Component
 public class MinioTemplate implements InitializingBean {

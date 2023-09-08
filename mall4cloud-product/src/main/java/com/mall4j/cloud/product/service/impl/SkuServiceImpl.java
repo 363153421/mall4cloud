@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 /**
  * sku信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 @Service

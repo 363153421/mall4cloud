@@ -1,7 +1,7 @@
 package com.mall4j.cloud.common.cache.constant;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/01/25
  */
 public interface BizCacheNames {

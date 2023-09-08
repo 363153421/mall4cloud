@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/22
  */
 public class AuthAccountDTO {

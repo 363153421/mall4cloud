@@ -1,7 +1,7 @@
 package com.mall4j.cloud.leaf.common;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public class Result {
 

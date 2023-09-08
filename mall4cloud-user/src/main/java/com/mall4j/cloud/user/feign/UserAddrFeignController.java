@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 用户地址feign连接
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/07
  */
 @RestController

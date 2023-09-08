@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 用户信息feign连接
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/07
  */
 @FeignClient(value = "mall4cloud-user",contextId = "user")

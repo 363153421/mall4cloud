@@ -7,7 +7,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  * 订单支付记录
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-25 09:50:59
  */
 public class PayInfo extends BaseModel implements Serializable{

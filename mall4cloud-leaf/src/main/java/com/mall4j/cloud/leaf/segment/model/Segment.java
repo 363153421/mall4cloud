@@ -3,7 +3,7 @@ package com.mall4j.cloud.leaf.segment.model;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author left
+ * @author wuKeFan
  */
 public class Segment {
 

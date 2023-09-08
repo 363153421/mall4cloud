@@ -1,7 +1,7 @@
 package com.mall4j.cloud.api.order.bo;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/12/30
  */
 public class OrderStatusBO {

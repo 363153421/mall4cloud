@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/22
  */
 public class ChangeAccountDTO {

@@ -3,7 +3,7 @@ package com.mall4j.cloud.leaf;
 import com.mall4j.cloud.leaf.common.Result;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public interface IDGen {
 

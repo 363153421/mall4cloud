@@ -23,7 +23,7 @@ import javax.validation.Valid;
 import java.util.Objects;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/09/02
  */
 @RequestMapping(value = "/m/shop_user")

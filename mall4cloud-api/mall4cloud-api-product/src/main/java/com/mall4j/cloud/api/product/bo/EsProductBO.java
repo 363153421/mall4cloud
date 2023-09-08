@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/12
  */
 public class EsProductBO {

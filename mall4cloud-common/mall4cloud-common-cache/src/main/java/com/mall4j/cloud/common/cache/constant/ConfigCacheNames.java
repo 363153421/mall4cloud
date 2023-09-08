@@ -1,7 +1,7 @@
 package com.mall4j.cloud.common.cache.constant;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/28
  */
 public interface ConfigCacheNames {

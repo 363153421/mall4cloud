@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 店铺详情VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-12-05 15:50:25
  */
 public class ShopDetailVO extends BaseVO{

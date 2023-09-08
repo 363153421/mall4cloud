@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/22
  */
 public interface SysUserMapper {

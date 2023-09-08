@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/12
  */
 public class SpuUpdateDTO implements Serializable {

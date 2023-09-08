@@ -6,7 +6,7 @@ import com.mall4j.cloud.common.model.BaseModel;
 /**
  *
  *
- * @author YXF
+ * @author wuKeFan
  * @date 2020-12-04 16:15:02
  */
 public class AttachFileGroup extends BaseModel implements Serializable{

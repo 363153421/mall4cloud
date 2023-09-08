@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * 请求方法 1.GET 2.POST 3.PUT 4.DELETE http方法枚举
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/9/3
  */
 public enum HttpMethodEnum {

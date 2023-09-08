@@ -1,7 +1,7 @@
 package com.mall4j.cloud.leaf.segment.model;
 
 /**
- * @author leaf
+ * @author wuKeFan
  */
 public class LeafAlloc {
 

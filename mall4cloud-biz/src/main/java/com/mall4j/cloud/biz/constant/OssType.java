@@ -2,7 +2,7 @@ package com.mall4j.cloud.biz.constant;
 
 /**
  * 文件上传存储类型
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2021/01/20
  */
 public enum OssType {

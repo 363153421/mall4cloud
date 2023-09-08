@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 上传文件记录表
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-21 10:21:40
  */
 public class AttachFile extends BaseModel implements Serializable {

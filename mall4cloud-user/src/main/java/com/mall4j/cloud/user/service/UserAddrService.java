@@ -6,7 +6,7 @@ import com.mall4j.cloud.user.model.UserAddr;
 import java.util.List;
 
 /**
- * @Author lth
+ * @author wuKeFan
  * @Date 2021/7/1 17:37
  */
 public interface UserAddrService {

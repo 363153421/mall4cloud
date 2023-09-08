@@ -2,7 +2,7 @@ package com.mall4j.cloud.payment.constant;
 
 /**
  * 支付回调类型
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 public enum BackType {
 

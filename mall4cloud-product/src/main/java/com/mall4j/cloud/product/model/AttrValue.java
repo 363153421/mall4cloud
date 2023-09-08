@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * 属性值信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class AttrValue extends BaseModel implements Serializable{

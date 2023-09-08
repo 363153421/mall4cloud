@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  *
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-11 13:49:06
  */
 public class SpuExtension extends BaseModel implements Serializable{

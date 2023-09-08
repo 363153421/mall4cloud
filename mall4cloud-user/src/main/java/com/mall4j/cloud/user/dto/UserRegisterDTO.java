@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author lhd
+ * @author wuKeFan
  * @date 2020/12/30
  */
 @Schema(description = "用户注册信息")

@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 商品拓展信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  */
 @CanalModel(database = "mall4cloud_product", table = "spu_extension", fieldNamingPolicy = FieldNamingPolicy.LOWER_UNDERSCORE)
 public class SpuExtensionBO {

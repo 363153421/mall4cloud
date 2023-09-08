@@ -2,7 +2,7 @@ package com.mall4j.cloud.search.constant;
 
 /**
  * es当中的index
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/12
  */
 public enum DataType {

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 实现该接口之后，根据缓存的cacheName和ttl将缓存进行过期
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/7/4
  */
 public interface CacheTtlAdapter {

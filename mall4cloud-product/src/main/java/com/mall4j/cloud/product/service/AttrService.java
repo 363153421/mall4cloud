@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 属性信息
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:23
  */
 public interface AttrService {

@@ -6,7 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 /**
  * 店铺详情VO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-23 16:24:29
  */
 public class EsShopDetailBO extends BaseVO{

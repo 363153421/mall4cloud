@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * spu信息DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
 public class SpuPageSearchDTO {

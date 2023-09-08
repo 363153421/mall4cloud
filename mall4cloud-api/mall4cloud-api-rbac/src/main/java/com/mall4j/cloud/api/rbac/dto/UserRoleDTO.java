@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/11/27
  */
 public class UserRoleDTO {

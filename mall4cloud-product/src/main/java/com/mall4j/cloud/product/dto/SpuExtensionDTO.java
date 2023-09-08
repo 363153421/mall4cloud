@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * DTO
  *
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020-11-11 13:49:06
  */
 public class SpuExtensionDTO{

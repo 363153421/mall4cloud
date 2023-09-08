@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @author FrozenWatermelon
+ * @author wuKeFan
  * @date 2020/7/8
  */
 @SpringBootApplication(scanBasePackages = { "com.mall4j.cloud" })
