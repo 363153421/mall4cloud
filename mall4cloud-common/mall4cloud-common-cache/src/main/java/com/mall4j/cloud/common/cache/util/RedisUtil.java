@@ -88,7 +88,6 @@ public class RedisUtil {
 	 * 删除缓存
 	 * @param key 可以传一个值 或多个
 	 */
-	@SuppressWarnings("unchecked")
 	public static void del(String... key) {
 		if (key != null && key.length > 0) {
 			for (String s : key) {
@@ -218,7 +217,7 @@ public class RedisUtil {
 
 	/**
 	 * 批量删除缓存
-	 * @param keys
+	 * @param keys 需要删除的键列表
 	 */
 	public static void deleteBatch(List<String> keys) {
 		if (CollUtil.isEmpty(keys)) {
@@ -266,7 +265,7 @@ public class RedisUtil {
 		String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
 
 		//通过lure脚本原子验证令牌和删除令牌
-		Long result = STRING_REDIS_TEMPLATE.execute(new DefaultRedisScript<Long>(script, Long.class),
+		Long result = STRING_REDIS_TEMPLATE.execute(new DefaultRedisScript<>(script, Long.class),
 				Collections.singletonList(key),
 				value);
 

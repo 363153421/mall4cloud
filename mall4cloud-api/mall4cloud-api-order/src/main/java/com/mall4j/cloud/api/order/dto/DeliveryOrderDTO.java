@@ -1,6 +1,7 @@
 package com.mall4j.cloud.api.order.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020-12-07 15:10:00
  */
+@Data
 public class DeliveryOrderDTO{
 
 	@Schema(description = "deliveryOrderId" )
@@ -26,45 +28,4 @@ public class DeliveryOrderDTO{
 
 	private List<DeliveryOrderItemDTO> selectOrderItems;
 
-	public Long getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(Long orderId) {
-		this.orderId = orderId;
-	}
-
-	public Integer getDeliveryType() {
-		return deliveryType;
-	}
-
-	public void setDeliveryType(Integer deliveryType) {
-		this.deliveryType = deliveryType;
-	}
-
-	public List<DeliveryOrderItemDTO> getSelectOrderItems() {
-		return selectOrderItems;
-	}
-
-	public void setSelectOrderItems(List<DeliveryOrderItemDTO> selectOrderItems) {
-		this.selectOrderItems = selectOrderItems;
-	}
-
-	public Long getDeliveryOrderId() {
-		return deliveryOrderId;
-	}
-
-	public void setDeliveryOrderId(Long deliveryOrderId) {
-		this.deliveryOrderId = deliveryOrderId;
-	}
-
-	@Override
-	public String toString() {
-		return "DeliveryOrderDTO{" +
-				"deliveryOrderId='" + deliveryOrderId + '\'' +
-				"orderNumber='" + orderId + '\'' +
-				", deliveryType=" + deliveryType +
-				", selectOrderItems=" + selectOrderItems +
-				'}';
-	}
 }

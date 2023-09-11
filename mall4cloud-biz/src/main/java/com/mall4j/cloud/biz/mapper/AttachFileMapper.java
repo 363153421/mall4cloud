@@ -19,7 +19,7 @@ public interface AttachFileMapper {
 	 * 获取上传文件记录表列表
 	 *
 	 * @param fileName    文件名称
-	 * @param shopId
+	 * @param shopId 商铺id
 	 * @param fileGroupId 文件分组id
 	 * @return 文件记录表列表
 	 */
@@ -36,7 +36,6 @@ public interface AttachFileMapper {
 	/**
 	 * 更新上传文件记录表
 	 *
-	 * @param attachFile
 	 * @param attachFile 上传文件记录表
 	 */
 	void update(@Param("attachFile") AttachFile attachFile);
@@ -44,21 +43,21 @@ public interface AttachFileMapper {
 	/**
 	 * 根据上传文件记录表id删除上传文件记录表
 	 *
-	 * @param fileId
+	 * @param fileId 记录id
 	 */
 	void deleteById(@Param("fileId") Long fileId);
 
 	/**
 	 * 根据id获取文件信息
 	 *
-	 * @param fileId
+	 * @param fileId 记录id
 	 * @return
 	 */
     AttachFile getById(@Param("fileId") Long fileId);
 
 	/**
 	 * 批量更新文件的分组
-	 * @param attachFileGroupId
+	 * @param attachFileGroupId 分组
 	 */
 	void updateBatchByAttachFileGroupId(@Param("attachFileGroupId") Long attachFileGroupId);
 }

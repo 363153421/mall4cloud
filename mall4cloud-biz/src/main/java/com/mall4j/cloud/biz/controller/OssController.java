@@ -7,11 +7,9 @@ import com.mall4j.cloud.biz.config.OssConfig;
 import com.mall4j.cloud.biz.constant.OssType;
 import com.mall4j.cloud.biz.vo.OssVO;
 import com.mall4j.cloud.common.response.ServerResponseEntity;
-import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Operation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -30,8 +28,6 @@ import java.util.Objects;
 @RestController
 @Tag(name = "文件管理")
 public class OssController {
-
-    private static final Logger log = LoggerFactory.getLogger(OssController.class);
 
     /**
      * 上传的文件夹(根据时间确定)

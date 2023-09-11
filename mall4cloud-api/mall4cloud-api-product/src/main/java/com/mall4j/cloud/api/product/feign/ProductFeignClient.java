@@ -26,7 +26,7 @@ public interface ProductFeignClient {
 
     /**
      * 根据平台categoryId，获取spuId列表
-     * @param shopCategoryIds
+     * @param shopCategoryIds 平台分类id
      * @return spuId列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/product/getSpuIdsByShopCategoryIds")
@@ -34,7 +34,7 @@ public interface ProductFeignClient {
 
     /**
      * 根据categoryId列表，获取spuId列表
-     * @param categoryIds
+     * @param categoryIds 分类id列表
      * @return spuId列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/product/getSpuIdsByCategoryIds")
@@ -42,7 +42,7 @@ public interface ProductFeignClient {
 
     /**
      * 根据brandId，获取spuId列表
-     * @param brandId
+     * @param brandId 品牌id
      * @return spuId列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/product/getSpuIdsByBrandId")
@@ -50,7 +50,7 @@ public interface ProductFeignClient {
 
     /**
      * 根据店铺id，获取spuId列表
-     * @param shopId
+     * @param shopId 店铺id
      * @return spuId列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/product/getSpuIdsByShopId")

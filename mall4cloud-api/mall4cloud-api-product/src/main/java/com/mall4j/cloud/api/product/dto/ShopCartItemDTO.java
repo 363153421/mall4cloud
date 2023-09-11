@@ -1,6 +1,7 @@
 package com.mall4j.cloud.api.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotNull;
  * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
+@Data
 public class ShopCartItemDTO {
 
 	@NotNull(message = "产品ID不能为空")
@@ -30,45 +32,4 @@ public class ShopCartItemDTO {
 	@Schema(description = "店铺id" ,required=true)
 	private Long shopId;
 
-	public Long getSpuId() {
-		return spuId;
-	}
-
-	public void setSpuId(Long spuId) {
-		this.spuId = spuId;
-	}
-
-	public Long getSkuId() {
-		return skuId;
-	}
-
-	public void setSkuId(Long skuId) {
-		this.skuId = skuId;
-	}
-
-	public Integer getCount() {
-		return count;
-	}
-
-	public void setCount(Integer count) {
-		this.count = count;
-	}
-
-	public Long getShopId() {
-		return shopId;
-	}
-
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
-
-	@Override
-	public String toString() {
-		return "OrderItemDTO{" +
-				"spuId=" + spuId +
-				", skuId=" + skuId +
-				", count=" + count +
-				", shopId=" + shopId +
-				'}';
-	}
 }

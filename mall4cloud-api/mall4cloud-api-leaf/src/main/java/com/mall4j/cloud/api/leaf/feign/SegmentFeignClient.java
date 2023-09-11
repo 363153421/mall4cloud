@@ -16,8 +16,8 @@ public interface SegmentFeignClient {
 
 	/**
 	 * 获取id
-	 * @param key
-	 * @return
+	 * @param key 业务关键词
+	 * @return 长整数Long
 	 */
 	@GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/segment")
 	ServerResponseEntity<Long> getSegmentId(@RequestParam("key") String key);

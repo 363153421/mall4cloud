@@ -1,11 +1,14 @@
 package com.mall4j.cloud.api.rbac.dto;
 
+import lombok.Data;
+
 import javax.validation.constraints.NotNull;
 
 /**
  * @author wuKeFan
  * @date 2020/11/27
  */
+@Data
 public class ClearUserPermissionsCacheDTO {
 
     /**
@@ -20,27 +23,4 @@ public class ClearUserPermissionsCacheDTO {
     @NotNull(message = "sysType not null")
     private Integer sysType;
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Integer getSysType() {
-        return sysType;
-    }
-
-    public void setSysType(Integer sysType) {
-        this.sysType = sysType;
-    }
-
-    @Override
-    public String toString() {
-        return "ClearUserPermissionsCacheDTO{" +
-                "userId=" + userId +
-                ", sysType=" + sysType +
-                '}';
-    }
 }

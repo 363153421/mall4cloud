@@ -1,6 +1,7 @@
 package com.mall4j.cloud.api.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotNull;
  * @author wuKeFan
  * @date 2020/12/22
  */
+@Data
 public class SkuStockLockDTO {
 
     @NotNull(message = "产品ID不能为空")
@@ -28,9 +30,6 @@ public class SkuStockLockDTO {
     @Schema(description = "商品数量" ,required=true)
     private Integer count;
 
-    public SkuStockLockDTO() {
-    }
-
     public SkuStockLockDTO(Long spuId, Long skuId, Long orderId, Integer count) {
         this.spuId = spuId;
         this.skuId = skuId;
@@ -38,45 +37,4 @@ public class SkuStockLockDTO {
         this.count = count;
     }
 
-    public Long getSpuId() {
-        return spuId;
-    }
-
-    public void setSpuId(Long spuId) {
-        this.spuId = spuId;
-    }
-
-    public Long getSkuId() {
-        return skuId;
-    }
-
-    public void setSkuId(Long skuId) {
-        this.skuId = skuId;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    @Override
-    public String toString() {
-        return "SkuStockLockDTO{" +
-                "spuId=" + spuId +
-                ", skuId=" + skuId +
-                ", orderId=" + orderId +
-                ", count=" + count +
-                '}';
-    }
 }

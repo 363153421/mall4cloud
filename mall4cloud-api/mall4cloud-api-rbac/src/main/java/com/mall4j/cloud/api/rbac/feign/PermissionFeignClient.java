@@ -22,11 +22,11 @@ public interface PermissionFeignClient {
 
 	/**
 	 * 校验是否有某个uri的权限
-	 * @param userId
-	 * @param sysType
-	 * @param uri
-	 * @param isAdmin
-	 * @param method
+	 * @param userId 用户id
+	 * @param sysType 系统类型
+	 * @param uri 链接地址
+	 * @param isAdmin 是否是管理员
+	 * @param method 请求方式
 	 * @return 是否有某个uri的权限
 	 */
 	@GetMapping(value = Auth.CHECK_RBAC_URI)
@@ -36,7 +36,7 @@ public interface PermissionFeignClient {
 
 	/**
 	 * 清除用户权限缓存
-	 * @param clearUserPermissionsCacheDTO
+	 * @param clearUserPermissionsCacheDTO 参数信息
 	 * @return 是否调用成功
 	 */
 	@PostMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/permission/clearUserPermissionsCache")

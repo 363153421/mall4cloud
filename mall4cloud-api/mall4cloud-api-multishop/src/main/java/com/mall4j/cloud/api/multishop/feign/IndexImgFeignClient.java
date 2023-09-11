@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author wuKeFan
- * @Date 2021/7/8 11:10
+ * @date 2021/7/8 11:10
  */
 @FeignClient(value = "mall4cloud-multishop",contextId = "indexImg")
 public interface IndexImgFeignClient {

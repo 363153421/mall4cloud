@@ -44,7 +44,7 @@ public enum StatusEnum {
         this.value = value;
     }
 
-    public static Boolean offlineStatus (Integer value) {
+    public static Boolean offlineStatus(Integer value) {
         StatusEnum[] enums = values();
         for (StatusEnum statusEnum : enums) {
             if (statusEnum.value().equals(value)) {

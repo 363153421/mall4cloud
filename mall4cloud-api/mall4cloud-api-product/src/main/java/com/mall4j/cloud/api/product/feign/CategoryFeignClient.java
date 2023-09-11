@@ -25,8 +25,8 @@ public interface CategoryFeignClient {
 
     /**
      * 根据上级id，获取子分类id列表
-     * @param categoryId
-     * @return
+     * @param categoryId 上级id
+     * @return 子类id列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/category/listCategoryId")
     ServerResponseEntity<List<Long>> listCategoryId(@RequestParam("categoryId") Long categoryId);

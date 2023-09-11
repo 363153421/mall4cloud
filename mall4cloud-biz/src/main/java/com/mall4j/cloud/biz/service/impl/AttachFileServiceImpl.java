@@ -11,9 +11,9 @@ import com.mall4j.cloud.common.database.util.PageUtil;
 import com.mall4j.cloud.common.database.vo.PageVO;
 import com.mall4j.cloud.common.security.AuthUserContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -28,9 +28,6 @@ public class AttachFileServiceImpl implements AttachFileService {
 
     @Autowired
     private AttachFileMapper attachFileMapper;
-
-    @Autowired
-    private Environment environment;
 
     @Autowired
     private MinioTemplate minioTemplate;

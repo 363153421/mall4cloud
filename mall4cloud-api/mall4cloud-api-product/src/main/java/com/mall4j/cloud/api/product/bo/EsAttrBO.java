@@ -1,9 +1,12 @@
 package com.mall4j.cloud.api.product.bo;
 
+import lombok.Data;
+
 /**
  * @author wuKeFan
  * @date 2020/11/12
  */
+@Data
 public class EsAttrBO {
 
     /**
@@ -26,45 +29,4 @@ public class EsAttrBO {
      */
     private String attrValueName;
 
-    public Long getAttrId() {
-        return attrId;
-    }
-
-    public void setAttrId(Long attrId) {
-        this.attrId = attrId;
-    }
-
-    public String getAttrName() {
-        return attrName;
-    }
-
-    public void setAttrName(String attrName) {
-        this.attrName = attrName;
-    }
-
-    public Long getAttrValueId() {
-        return attrValueId;
-    }
-
-    public void setAttrValueId(Long attrValueId) {
-        this.attrValueId = attrValueId;
-    }
-
-    public String getAttrValueName() {
-        return attrValueName;
-    }
-
-    public void setAttrValueName(String attrValueName) {
-        this.attrValueName = attrValueName;
-    }
-
-    @Override
-    public String toString() {
-        return "EsAttrBO{" +
-                "attrId=" + attrId +
-                ", attrName='" + attrName + '\'' +
-                ", attrValueId=" + attrValueId +
-                ", attrValueName='" + attrValueName + '\'' +
-                '}';
-    }
 }

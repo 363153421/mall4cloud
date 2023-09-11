@@ -1,5 +1,7 @@
 package com.mall4j.cloud.api.rbac.dto;
 
+import lombok.Data;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020/11/27
  */
+@Data
 public class UserRoleDTO {
 
     /**
@@ -23,27 +26,4 @@ public class UserRoleDTO {
     @NotEmpty(message = "userId not null")
     private List<Long> roleIds;
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public List<Long> getRoleIds() {
-        return roleIds;
-    }
-
-    public void setRoleIds(List<Long> roleIds) {
-        this.roleIds = roleIds;
-    }
-
-    @Override
-    public String toString() {
-        return "UserRoleDTO{" +
-                "userId=" + userId +
-                ", roleIds=" + roleIds +
-                '}';
-    }
 }

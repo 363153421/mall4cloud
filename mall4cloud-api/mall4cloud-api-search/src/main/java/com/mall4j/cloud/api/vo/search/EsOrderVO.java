@@ -1,6 +1,7 @@
 package com.mall4j.cloud.api.vo.search;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2021/2/5
  */
+@Data
 public class EsOrderVO {
 
     @Schema(description = "订单项" ,required=true)
@@ -89,189 +91,4 @@ public class EsOrderVO {
      */
     private Integer deleteStatus;
 
-    public Long getOrderAddrId() {
-        return orderAddrId;
-    }
-
-    public void setOrderAddrId(Long orderAddrId) {
-        this.orderAddrId = orderAddrId;
-    }
-
-    public List<EsOrderItemVO> getOrderItems() {
-        return orderItems;
-    }
-
-    public void setOrderItems(List<EsOrderItemVO> orderItems) {
-        this.orderItems = orderItems;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public Long getActualTotal() {
-        return actualTotal;
-    }
-
-    public void setActualTotal(Long actualTotal) {
-        this.actualTotal = actualTotal;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Integer getDeliveryType() {
-        return deliveryType;
-    }
-
-    public void setDeliveryType(Integer deliveryType) {
-        this.deliveryType = deliveryType;
-    }
-
-    public String getShopName() {
-        return shopName;
-    }
-
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
-    }
-
-    public Long getShopId() {
-        return shopId;
-    }
-
-    public void setShopId(Long shopId) {
-        this.shopId = shopId;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Integer getAllCount() {
-        return allCount;
-    }
-
-    public void setAllCount(Integer allCount) {
-        this.allCount = allCount;
-    }
-
-    public String getConsignee() {
-        return consignee;
-    }
-
-    public void setConsignee(String consignee) {
-        this.consignee = consignee;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public Long getTotal() {
-        return total;
-    }
-
-    public void setTotal(Long total) {
-        this.total = total;
-    }
-
-    public Integer getCloseType() {
-        return closeType;
-    }
-
-    public void setCloseType(Integer closeType) {
-        this.closeType = closeType;
-    }
-
-    public Date getPayTime() {
-        return payTime;
-    }
-
-    public void setPayTime(Date payTime) {
-        this.payTime = payTime;
-    }
-
-    public Date getDeliveryTime() {
-        return deliveryTime;
-    }
-
-    public void setDeliveryTime(Date deliveryTime) {
-        this.deliveryTime = deliveryTime;
-    }
-
-    public Date getFinallyTime() {
-        return finallyTime;
-    }
-
-    public void setFinallyTime(Date finallyTime) {
-        this.finallyTime = finallyTime;
-    }
-
-    public Date getCancelTime() {
-        return cancelTime;
-    }
-
-    public void setCancelTime(Date cancelTime) {
-        this.cancelTime = cancelTime;
-    }
-
-    public Integer getIsPayed() {
-        return isPayed;
-    }
-
-    public void setIsPayed(Integer isPayed) {
-        this.isPayed = isPayed;
-    }
-
-    public Integer getDeleteStatus() {
-        return deleteStatus;
-    }
-
-    public void setDeleteStatus(Integer deleteStatus) {
-        this.deleteStatus = deleteStatus;
-    }
-
-    @Override
-    public String toString() {
-        return "EsOrderVO{" +
-                "orderItems=" + orderItems +
-                ", orderId=" + orderId +
-                ", actualTotal=" + actualTotal +
-                ", status=" + status +
-                ", deliveryType=" + deliveryType +
-                ", shopName='" + shopName + '\'' +
-                ", shopId=" + shopId +
-                ", createTime=" + createTime +
-                ", allCount=" + allCount +
-                ", consignee='" + consignee + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", orderAddrId=" + orderAddrId +
-                ", total=" + total +
-                ", closeType=" + closeType +
-                ", payTime=" + payTime +
-                ", deliveryTime=" + deliveryTime +
-                ", finallyTime=" + finallyTime +
-                ", cancelTime=" + cancelTime +
-                ", isPayed=" + isPayed +
-                ", deleteStatus=" + deleteStatus +
-                '}';
-    }
 }

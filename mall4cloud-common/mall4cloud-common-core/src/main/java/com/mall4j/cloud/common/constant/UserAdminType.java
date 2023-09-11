@@ -15,7 +15,7 @@ public enum UserAdminType {
     USER(0),
     ;
 
-    private Integer value;
+    private final Integer value;
 
     public Integer value() {
         return value;

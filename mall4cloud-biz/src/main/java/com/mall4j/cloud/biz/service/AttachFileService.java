@@ -38,14 +38,14 @@ public interface AttachFileService {
 
 	/**
 	 * 根据上传文件记录表id删除上传文件记录表
-	 * @param fileId
+	 * @param fileId 记录id
 	 */
 	void deleteById(Long fileId);
 
 	/**
 	 * 更新文件名称
-	 * @param attachFile
-	 * @return
+	 * @param attachFile  参数
+	 * @return true:成功,false:失败
 	 */
 	Boolean updateFileName(AttachFile attachFile);
 }

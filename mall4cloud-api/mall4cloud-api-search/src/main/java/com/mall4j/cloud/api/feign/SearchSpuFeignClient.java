@@ -23,9 +23,9 @@ public interface SearchSpuFeignClient {
 
     /**
      * 商品搜索
-     * @param pageDTO
-     * @param productSearchDTO
-     * @return
+     * @param pageDTO 分页参数
+     * @param productSearchDTO 请求参数
+     * @return 商品列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/searchSpu/search")
     ServerResponseEntity<EsPageVO<ProductSearchVO>> search(@RequestParam("pageDTO") EsPageDTO pageDTO, @RequestParam("productSearchDTO") ProductSearchDTO productSearchDTO);
@@ -42,7 +42,7 @@ public interface SearchSpuFeignClient {
      * @param pageNum 分页数
      * @param pageSize 每页大小
      * @param shopId 店铺id
-     * @return
+     * @return 商品列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/searchSpu/spuPage")
     ServerResponseEntity<EsPageVO<ProductSearchVO>> spuPage(@RequestParam("pageNum") Integer pageNum, @RequestParam("pageSize") Integer pageSize, @RequestParam("shopId") Long shopId);
@@ -51,7 +51,7 @@ public interface SearchSpuFeignClient {
      * 根据店铺id列表获取每个店铺的spu列表
      * @param shopIds 店铺id列表
      * @param size 每个店铺返回的商品数量
-     * @return
+     * @return 每个店铺的spu列表
      */
     @GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/searchSpu/limitSizeListByShopIds")
     ServerResponseEntity<List<SpuSearchVO>> limitSizeListByShopIds(@RequestParam("shopIds") List<Long> shopIds, @RequestParam("size") Integer size);

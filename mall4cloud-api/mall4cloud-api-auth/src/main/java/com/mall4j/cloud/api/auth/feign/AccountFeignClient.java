@@ -68,9 +68,8 @@ public interface AccountFeignClient {
 
 	/**
 	 * 根据用户名和系统类型获取用户信息
-	 * @param username
-	 * @param sysType
-	 * @return
+	 * @param username 用户名
+	 * @param sysType 系统类型
 	 */
 	@PostMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/getByUsernameAndSysType")
 	ServerResponseEntity<AuthAccountVO> getByUsernameAndSysType(@RequestParam("userName") String username, @RequestParam("sysType") SysTypeEnum sysType);
@@ -80,15 +79,13 @@ public interface AccountFeignClient {
 	 * @param userInfoInTokenBO 新的用户信息
 	 * @param userId 用户id
 	 * @param sysType 用户类型
-	 * @return
 	 */
 	@PutMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/accout/updateTenantIdByUserIdAndSysType")
 	ServerResponseEntity<Void> updateUserInfoByUserIdAndSysType(@RequestBody UserInfoInTokenBO userInfoInTokenBO, @RequestParam("userId") Long userId, @RequestParam("sysType") Integer sysType);
 
 	/**
 	 * 根据租户id查询商家信息
-	 * @param tenantId
-	 * @return
+	 * @param tenantId 租户ID
 	 */
 	@GetMapping(value = FeignInsideAuthConfig.FEIGN_INSIDE_URL_PREFIX + "/insider/account/getMerchantInfoByTenantId")
 	ServerResponseEntity<AuthAccountVO> getMerchantInfoByTenantId(@RequestParam("tenantId") Long tenantId);

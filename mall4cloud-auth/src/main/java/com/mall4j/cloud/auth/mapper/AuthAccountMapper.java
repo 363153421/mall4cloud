@@ -51,7 +51,7 @@ public interface AuthAccountMapper {
 	/**
 	 * 保存
 	 *
-	 * @param authAccount
+	 * @param authAccount 账户信息
 	 */
 	void save(@Param("authAccount") AuthAccount authAccount);
 
@@ -72,33 +72,32 @@ public interface AuthAccountMapper {
 
 	/**
 	 * 根据用户名和系统类型获取用户信息
-	 * @param validAccount
-	 * @param systemType
+	 * @param validAccount 用户名
+	 * @param systemType 系统类型
 	 * @return uid
 	 */
 	AuthAccount getAccountByInputUserName(@Param("validAccount") String validAccount, @Param("systemType") Integer systemType);
 
 	/**
 	 * 根据用户名和系统类型获取用户信息
-	 * @param username
-	 * @param sysType
-	 * @return
+	 * @param username 用户名
+	 * @param sysType 系统类型
+	 * @return 用户信息
 	 */
     AuthAccountVO getByUsernameAndSysType(@Param("userName") String username, @Param("sysType") Integer sysType);
 
 	/**
 	 * 根据用户id更新租户id
-	 * @param authAccount
-	 * @param userId
-	 * @param sysType
-	 * @return
+	 * @param authAccount 账户信息
+	 * @param userId 用户id
+	 * @param sysType 系统类型
 	 */
 	int updateUserInfoByUserId(@Param("authAccount") AuthAccount authAccount, @Param("userId") Long userId, @Param("sysType") Integer sysType);
 
 	/**
 	 * 根据租户id获取商家信息
-	 * @param tenantId
-	 * @return
+	 * @param tenantId 租户id
+	 * @return 商家信息
 	 */
 	AuthAccountVO getMerchantInfoByTenantId(@Param("tenantId") Long tenantId);
 }

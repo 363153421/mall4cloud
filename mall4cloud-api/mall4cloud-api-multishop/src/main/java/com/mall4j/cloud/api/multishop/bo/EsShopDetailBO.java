@@ -2,6 +2,8 @@ package com.mall4j.cloud.api.multishop.bo;
 
 import com.mall4j.cloud.common.vo.BaseVO;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 店铺详情VO
@@ -9,7 +11,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * @author wuKeFan
  * @date 2020-11-23 16:24:29
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class EsShopDetailBO extends BaseVO{
+
     private static final long serialVersionUID = 1L;
 
     @Schema(description = "店铺id" )
@@ -27,54 +32,4 @@ public class EsShopDetailBO extends BaseVO{
     @Schema(description = "店铺状态(-1:未开通 0: 停业中 1:营业中)" )
     private Integer shopStatus;
 
-	public Long getShopId() {
-		return shopId;
-	}
-
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
-
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public String getShopName() {
-		return shopName;
-	}
-
-	public void setShopName(String shopName) {
-		this.shopName = shopName;
-	}
-
-	public String getShopLogo() {
-		return shopLogo;
-	}
-
-	public void setShopLogo(String shopLogo) {
-		this.shopLogo = shopLogo;
-	}
-
-	public Integer getShopStatus() {
-		return shopStatus;
-	}
-
-	public void setShopStatus(Integer shopStatus) {
-		this.shopStatus = shopStatus;
-	}
-
-	@Override
-	public String toString() {
-		return "EsShopDetailBO{" +
-				"shopId=" + shopId +
-				", type=" + type +
-				", shopName='" + shopName + '\'' +
-				", shopLogo='" + shopLogo + '\'' +
-				", shopStatus=" + shopStatus +
-				'}';
-	}
 }

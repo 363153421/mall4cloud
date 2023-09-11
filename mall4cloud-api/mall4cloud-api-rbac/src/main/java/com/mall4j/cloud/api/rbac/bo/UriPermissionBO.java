@@ -1,11 +1,14 @@
 package com.mall4j.cloud.api.rbac.bo;
 
+import lombok.Data;
+
 /**
  * uri权限bo
  *
  * @author wuKeFan
  * @date 2020/9/3
  */
+@Data
 public class UriPermissionBO {
 
 	/**
@@ -22,35 +25,5 @@ public class UriPermissionBO {
 	 * permission
 	 */
 	private String permission;
-
-	public Integer getMethod() {
-		return method;
-	}
-
-	public void setMethod(Integer method) {
-		this.method = method;
-	}
-
-	public String getUri() {
-		return uri;
-	}
-
-	public void setUri(String uri) {
-		this.uri = uri;
-	}
-
-	public String getPermission() {
-		return permission;
-	}
-
-	public void setPermission(String permission) {
-		this.permission = permission;
-	}
-
-	@Override
-	public String toString() {
-		return "UriPermissionBO{" + "method=" + method + ", uri='" + uri + '\'' + ", permission='" + permission + '\''
-				+ '}';
-	}
 
 }

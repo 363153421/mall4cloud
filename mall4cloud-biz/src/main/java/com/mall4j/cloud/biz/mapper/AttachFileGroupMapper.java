@@ -14,7 +14,7 @@ public interface AttachFileGroupMapper {
 
 	/**
 	 * 获取列表
-	 * @param shopId
+	 * @param shopId 店铺id
 	 * @return 列表
 	 */
 	List<AttachFileGroupVO> list(@Param("shopId") Long shopId);
@@ -23,28 +23,28 @@ public interface AttachFileGroupMapper {
 	 * 根据id获取
 	 *
 	 * @param attachFileGroupId id
-	 * @return
+	 * @return 详细信息
 	 */
 	AttachFileGroupVO getByAttachFileGroupId(@Param("attachFileGroupId") Long attachFileGroupId);
 
 	/**
 	 * 保存
 	 *
-	 * @param attachFileGroup
+	 * @param attachFileGroup 参数
 	 */
 	void save(@Param("attachFileGroup") AttachFileGroup attachFileGroup);
 
 	/**
 	 * 更新
 	 *
-	 * @param attachFileGroup
+	 * @param attachFileGroup 参数
 	 */
 	void update(@Param("attachFileGroup") AttachFileGroup attachFileGroup);
 
 	/**
 	 * 根据id删除
 	 *
-	 * @param attachFileGroupId
+	 * @param attachFileGroupId 参数
 	 */
 	void deleteById(@Param("attachFileGroupId") Long attachFileGroupId);
 }

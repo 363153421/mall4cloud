@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * 验证码
  *
  * @author wuKeFan
- * @SpringContextUtilsdate 2023-09-06 17:07:40
+ * @data 2023-09-06 17:07:40
  */
 @RestController
 @RequestMapping("/ua/captcha")

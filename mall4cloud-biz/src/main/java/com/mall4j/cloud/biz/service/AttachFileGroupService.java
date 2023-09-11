@@ -23,25 +23,25 @@ public interface AttachFileGroupService {
 	 * 根据id获取
 	 *
 	 * @param attachFileGroupId id
-	 * @return
+	 * @return 详细信息
 	 */
 	AttachFileGroupVO getByAttachFileGroupId(Long attachFileGroupId);
 
 	/**
 	 * 保存
-	 * @param attachFileGroup
+	 * @param attachFileGroup 参数
 	 */
 	void save(AttachFileGroup attachFileGroup);
 
 	/**
 	 * 更新
-	 * @param attachFileGroup
+	 * @param attachFileGroup 参数
 	 */
 	void update(AttachFileGroup attachFileGroup);
 
 	/**
 	 * 根据id删除
-	 * @param attachFileGroupId
+	 * @param attachFileGroupId id
 	 */
 	void deleteById(Long attachFileGroupId);
 }

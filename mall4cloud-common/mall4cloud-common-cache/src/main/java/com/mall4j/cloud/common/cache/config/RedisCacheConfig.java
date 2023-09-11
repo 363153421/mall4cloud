@@ -75,7 +75,7 @@ public class RedisCacheConfig {
 
 	/**
 	 * 自定义redis序列化的机制,重新定义一个ObjectMapper.防止和MVC的冲突
-	 * https://juejin.im/post/5e869d426fb9a03c6148c97e
+	 * 参考:<a href="https://juejin.im/post/5e869d426fb9a03c6148c97e">...</a>
 	 */
 	@Bean
 	public RedisSerializer<Object> redisSerializer() {

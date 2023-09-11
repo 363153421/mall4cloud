@@ -30,7 +30,7 @@ public class MinioTemplate implements InitializingBean {
     static  final Logger logger = LoggerFactory.getLogger(MinioTemplate.class);
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         this.minioClient =  MinioClient.builder().endpoint(ossConfig.getEndpoint())
                 .credentials(ossConfig.getAccessKeyId(), ossConfig.getAccessKeySecret())
                 .build();
@@ -41,7 +41,7 @@ public class MinioTemplate implements InitializingBean {
      * 删除文件
      *
      * @param objectName 文件名称
-     * @throws Exception https://docs.minio.io/cn/java-client-api-reference.html#removeObject
+     * @throws Exception 参考https://docs.minio.io/cn/java-client-api-reference.html#removeObject
      */
     public void removeObject(String objectName) throws Exception {
         minioClient.removeObject(RemoveObjectArgs.builder().object(objectName).bucket(ossConfig.getBucket()).build());
@@ -49,12 +49,11 @@ public class MinioTemplate implements InitializingBean {
 
     /**
      * 获得上传的URL
-     * @param objectName
+     * @param objectName 文件路径(对象名)
      */
     public String getPresignedObjectUrl(String objectName){
         try {
-            String presignedObjectUrl = minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder().bucket(ossConfig.getBucket()).object(objectName).expiry(10, TimeUnit.MINUTES).method(Method.PUT).build());
-            return presignedObjectUrl;
+            return minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder().bucket(ossConfig.getBucket()).object(objectName).expiry(10, TimeUnit.MINUTES).method(Method.PUT).build());
         } catch (Exception e) {
             e.printStackTrace();
             throw new Mall4cloudException(ResponseEnum.EXCEPTION);

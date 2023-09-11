@@ -171,8 +171,8 @@ public class TokenStore {
 
 	/**
 	 * 刷新token，并返回新的token
-	 * @param refreshToken
-	 * @return
+	 * @param refreshToken 刷新token的token
+	 * @return 刷新后的token信息
 	 */
 	public ServerResponseEntity<TokenInfoBO> refreshToken(String refreshToken) {
 		if (StrUtil.isBlank(refreshToken)) {

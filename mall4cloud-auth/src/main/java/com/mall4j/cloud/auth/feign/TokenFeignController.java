@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TokenFeignController implements TokenFeignClient {
 
-	private static final Logger logger = LoggerFactory.getLogger(TokenFeignController.class);
-
 	@Autowired
 	private TokenStore tokenStore;
 

@@ -1,5 +1,7 @@
 package com.mall4j.cloud.common.model;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,6 +13,7 @@ import java.util.Date;
  * @author wuKeFan
  * @date 2023-09-06 17:09:35
  */
+@Data
 public class BaseModel implements Serializable {
 
 	/**
@@ -22,26 +25,5 @@ public class BaseModel implements Serializable {
 	 * 更新时间
 	 */
 	protected Date updateTime;
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getUpdateTime() {
-		return updateTime;
-	}
-
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	@Override
-	public String toString() {
-		return "BaseModel{" + "createTime=" + createTime + ", updateTime=" + updateTime + '}';
-	}
 
 }
