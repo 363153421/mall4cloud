@@ -29,15 +29,14 @@ public interface OrderService {
 
 	/**
 	 * 根据订单信息id删除订单信息
-	 * @param orderId
+	 * @param orderId 订单id
 	 */
 	void deleteById(Long orderId);
 
 	/**
 	 * 提交订单
-	 * @param userId
-	 * @param mergerOrder
-	 * @return
+	 * @param userId 用户id
+	 * @param mergerOrder 订单信息
 	 */
     List<Long> submit(Long userId, ShopCartOrderMergerVO mergerOrder);
 
@@ -91,7 +90,6 @@ public interface OrderService {
 	/**
 	 * 更新订单
 	 * @param orderId 订单号
-	 * @return
 	 */
 	int receiptOrder(Long orderId);
 
@@ -110,14 +108,13 @@ public interface OrderService {
 	/**
 	 * 根据订单id列表获取订单金额信息
 	 * @param orderIdList 订单id列表
-	 * @return
+	 * @return 订单金额信息
 	 */
     SubmitOrderPayAmountInfoBO getSubmitOrderPayAmountInfo(long[] orderIdList);
 
 	/**
 	 * 获取订单需要保存到es中的数据
 	 * @param orderId 订单id
-	 * @return
 	 */
     EsOrderBO getEsOrder(Long orderId);
 
@@ -125,14 +122,14 @@ public interface OrderService {
 	 * 获取订单和订单项信息
 	 * @param orderId 订单id
 	 * @param shopId  店铺id
-	 * @return
+	 * @return 订单和订单项信息
 	 */
 	Order getOrderAndOrderItemData(Long orderId,Long shopId);
 
 	/**
 	 * 计算每个订单状态的状态数量
 	 * @param userId 用户id
-	 * @return
+	 * @return 订单状态的状态数量
 	 */
 	OrderCountVO countNumberOfStatus(Long userId);
 }

@@ -41,28 +41,28 @@ public interface ShopUserMapper {
     /**
      * 保存商家用户信息
      *
-     * @param shopUser
+     * @param shopUser 商家用户信息
      */
     void save(@Param("shopUser") ShopUser shopUser);
 
     /**
      * 更新店铺用户信息
      *
-     * @param shopUser
+     * @param shopUser 商家用户信息
      */
     void update(@Param("shopUser") ShopUser shopUser);
 
     /**
      * 根据店铺用户id删除店铺用户
      *
-     * @param shopUserId
+     * @param shopUserId 商家用户id
      */
     void deleteById(@Param("shopUserId") Long shopUserId);
 
     /**
      * 获取店主账号的用户id-第一个创建的账号（仅用于审核店铺）
      *
-     * @param shopId
+     * @param shopId 商家用户id
      * @return
      */
     Long getUserIdByShopId(@Param("shopId") Long shopId);

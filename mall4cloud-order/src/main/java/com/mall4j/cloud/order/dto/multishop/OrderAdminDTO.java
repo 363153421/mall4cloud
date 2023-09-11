@@ -1,6 +1,7 @@
 package com.mall4j.cloud.order.dto.multishop;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
@@ -10,6 +11,7 @@ import javax.validation.constraints.NotNull;
  * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
+@Data
 public class OrderAdminDTO {
 
     @Schema(description = "订单id" )
@@ -22,36 +24,4 @@ public class OrderAdminDTO {
     @Schema(description = "配送类型 3：无需快递" )
     private Integer dvyType;
 
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
-    }
-
-    public Integer getDvyType() {
-        return dvyType;
-    }
-
-    public void setDvyType(Integer dvyType) {
-        this.dvyType = dvyType;
-    }
-
-    public Long getShopId() {
-        return shopId;
-    }
-
-    public void setShopId(Long shopId) {
-        this.shopId = shopId;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderDTO{" +
-                ", orderId=" + orderId +
-                ", shopId=" + shopId +
-                ", dvyType=" + dvyType +
-                '}';
-    }
 }

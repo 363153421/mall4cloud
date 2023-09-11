@@ -41,20 +41,20 @@ public interface SysUserMapper {
     /**
      * 保存商家用户信息
      *
-     * @param sysUser
+     * @param sysUser 用户信息
      */
     void save(@Param("sysUser") SysUser sysUser);
 
     /**
      * 更新平台用户信息
      *
-     * @param sysUser
+     * @param sysUser 用户信息
      */
     void update(@Param("sysUser") SysUser sysUser);
 
     /**
      * 根据平台用户id删除平台用户
-     * @param sysUserId
+     * @param sysUserId 平台用户id
      */
     void deleteById(@Param("sysUserId") Long sysUserId);
 }

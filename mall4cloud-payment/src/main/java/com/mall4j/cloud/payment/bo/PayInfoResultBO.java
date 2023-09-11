@@ -1,10 +1,13 @@
 package com.mall4j.cloud.payment.bo;
 
+import lombok.Data;
+
 /**
  * 支付后返回的一些基础数据
  * @author wuKeFan
  * @date 2020/12/25
  */
+@Data
 public class PayInfoResultBO {
 
 	/**
@@ -37,63 +40,4 @@ public class PayInfoResultBO {
 	 */
 	private String callbackContent;
 
-	public Long getPayId() {
-		return payId;
-	}
-
-	public void setPayId(Long payId) {
-		this.payId = payId;
-	}
-
-	public String getBizPayNo() {
-		return bizPayNo;
-	}
-
-	public void setBizPayNo(String bizPayNo) {
-		this.bizPayNo = bizPayNo;
-	}
-
-	public Integer getIsPaySuccess() {
-		return isPaySuccess;
-	}
-
-	public void setIsPaySuccess(Integer isPaySuccess) {
-		this.isPaySuccess = isPaySuccess;
-	}
-
-	public String getSuccessString() {
-		return successString;
-	}
-
-	public void setSuccessString(String successString) {
-		this.successString = successString;
-	}
-
-	public Long getPayAmount() {
-		return payAmount;
-	}
-
-	public void setPayAmount(Long payAmount) {
-		this.payAmount = payAmount;
-	}
-
-	public String getCallbackContent() {
-		return callbackContent;
-	}
-
-	public void setCallbackContent(String callbackContent) {
-		this.callbackContent = callbackContent;
-	}
-
-	@Override
-	public String toString() {
-		return "PayInfoResultBO{" +
-				"payId=" + payId +
-				", bizPayNo='" + bizPayNo + '\'' +
-				", isPaySuccess=" + isPaySuccess +
-				", successString='" + successString + '\'' +
-				", payAmount=" + payAmount +
-				", callbackContent='" + callbackContent + '\'' +
-				'}';
-	}
 }

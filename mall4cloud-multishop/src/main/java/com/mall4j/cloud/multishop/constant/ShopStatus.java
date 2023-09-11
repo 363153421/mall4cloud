@@ -23,7 +23,7 @@ public enum ShopStatus {
 
     ;
 
-    private Integer num;
+    private final Integer num;
 
     public Integer value() {
         return num;

@@ -24,7 +24,7 @@ public interface OrderPayInfoService {
 
 	/**
 	 * 根据订单支付记录id删除订单支付记录
-	 * @param payId
+	 * @param payId 支付记录id
 	 */
 	void deleteById(Long payId);
 }

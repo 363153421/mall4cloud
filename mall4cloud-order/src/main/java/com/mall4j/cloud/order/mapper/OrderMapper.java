@@ -29,14 +29,14 @@ public interface OrderMapper {
 	/**
 	 * 根据订单信息id删除订单信息
 	 *
-	 * @param orderId
+	 * @param orderId 订单id
 	 */
 	void deleteById(@Param("orderId") Long orderId);
 
 	/**
 	 * 批量保存订单数据
 	 *
-	 * @param orders
+	 * @param orders 订单数据列表
 	 */
 	void saveBatch(@Param("orders") List<Order> orders);
 
@@ -89,8 +89,7 @@ public interface OrderMapper {
 
 	/**
 	 * 确认收货
-	 * @param orderId
-	 * @return
+	 * @param orderId 订单id
 	 */
 	int receiptOrder(@Param("orderId") Long orderId);
 
@@ -114,9 +113,8 @@ public interface OrderMapper {
 	/**
 	 * 获取订单和订单项的数据
 	 *
-	 * @param orderId
-	 * @param shopId
-	 * @return
+	 * @param orderId 订单id
+	 * @param shopId 店铺id
 	 */
 	Order getOrderAndOrderItemData(@Param("orderId") Long orderId, @Param("shopId") Long shopId);
 
@@ -124,7 +122,7 @@ public interface OrderMapper {
 	 * 根据订单id列表获取订单金额信息
 	 *
 	 * @param orderIdList 订单id列表
-	 * @return
+	 * @return 订单金额信息
 	 */
     SubmitOrderPayAmountInfoBO getSubmitOrderPayAmountInfo(@Param("orderIdList") long[] orderIdList);
 
@@ -132,7 +130,6 @@ public interface OrderMapper {
 	 * 获取订单需要保存到es中的数据
 	 *
 	 * @param orderId 订单id
-	 * @return
 	 */
     EsOrderBO getEsOrder(@Param("orderId") Long orderId);
 
@@ -140,7 +137,7 @@ public interface OrderMapper {
 	 * 计算每个订单状态的状态数量
 	 *
 	 * @param userId 用户id
-	 * @return
+	 * @return 返回数量
 	 */
     OrderCountVO countNumberOfStatus(@Param("userId") Long userId);
 }

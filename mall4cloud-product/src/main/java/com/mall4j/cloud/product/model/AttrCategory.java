@@ -1,6 +1,8 @@
 package com.mall4j.cloud.product.model;
 
 import com.mall4j.cloud.common.model.BaseModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 /**
@@ -9,6 +11,8 @@ import java.io.Serializable;
  * @author wuKeFan
  * @date 2020-11-23 16:20:01
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class AttrCategory extends BaseModel implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -27,38 +31,4 @@ public class AttrCategory extends BaseModel implements Serializable{
      */
     private Long attrId;
 
-	public Long getAttrCategoryId() {
-		return attrCategoryId;
-	}
-
-	public void setAttrCategoryId(Long attrCategoryId) {
-		this.attrCategoryId = attrCategoryId;
-	}
-
-	public Long getCategoryId() {
-		return categoryId;
-	}
-
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
-	}
-
-	public Long getAttrId() {
-		return attrId;
-	}
-
-	public void setAttrId(Long attrId) {
-		this.attrId = attrId;
-	}
-
-	@Override
-	public String toString() {
-		return "AttrCategory{" +
-				"attrCategoryId=" + attrCategoryId +
-				",createTime=" + createTime +
-				",updateTime=" + updateTime +
-				",categoryId=" + categoryId +
-				",attrId=" + attrId +
-				'}';
-	}
 }

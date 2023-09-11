@@ -16,13 +16,13 @@ public interface CategoryBrandMapper {
 	/**
 	 * 根据品牌分类关联信息id删除品牌分类关联信息
 	 *
-	 * @param brandId
+	 * @param brandId brandId
 	 */
 	void deleteByBrandId(@Param("brandId") Long brandId);
 
 	/**
 	 * 批量保存
-	 * @param categoryBrandList
+	 * @param categoryBrandList categoryBrandList
 	 */
 	void saveBatch(@Param("categoryBrandList") List<CategoryBrand> categoryBrandList);
 
@@ -35,8 +35,8 @@ public interface CategoryBrandMapper {
 
 	/**
 	 * 根据品牌id和分类id列表删除关联信息
-	 * @param brandId
-	 * @param categoryIds
+	 * @param brandId brandId
+	 * @param categoryIds categoryIds
 	 */
 	void deleteByBrandIdAndCategoryIds(@Param("brandId") Long brandId, @Param("categoryIds") List<Long> categoryIds);
 }

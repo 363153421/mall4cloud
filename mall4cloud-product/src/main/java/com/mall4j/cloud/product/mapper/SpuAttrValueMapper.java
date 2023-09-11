@@ -54,36 +54,36 @@ public interface SpuAttrValueMapper {
 	/**
 	 * 根据spuId获取商品属性列表
 	 *
-	 * @param spuId
-	 * @return
+	 * @param spuId spuId
+	 * @return 商品属性列表
 	 */
 	List<SpuAttrValueVO> getSpuAttrsBySpuId(@Param("spuId") Long spuId);
 
 	/**
 	 * 批量更新商品属性列表
 	 *
-	 * @param spuAttrValues
+	 * @param spuAttrValues spuAttrValues
 	 */
 	void updateBatch(@Param("spuAttrValues") List<SpuAttrValue> spuAttrValues);
 
 	/**
 	 * 批量删除商品属性
 	 *
-	 * @param spuAttrValueIds
+	 * @param spuAttrValueIds spuAttrValueIds
 	 */
 	void deleteBatch(@Param("spuAttrValueIds") List<Long> spuAttrValueIds);
 
 	/**
 	 * 根据属性值id，获取spuId列表
 	 *
-	 * @param attrValueIds
-	 * @return
+	 * @param attrValueIds attrValueIds
+	 * @return spuId列表
 	 */
 	List<Long> getShopIdByAttrValueIds(@Param("attrValueIds") List<Long> attrValueIds);
 
 	/**
 	 * 批量更新商品基本属性
-	 * @param spuAttrValues
+	 * @param spuAttrValues spuAttrValues
 	 */
 	void batchUpdateSpuAttrValue(@Param("spuAttrValues") List<SpuAttrValue> spuAttrValues);
 }

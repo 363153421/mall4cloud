@@ -92,7 +92,7 @@ public class SpuController {
     @Operation(summary = "更新spu信息" , description = "更新spu信息")
     public ServerResponseEntity<Void> update(@Valid @RequestBody SpuDTO spuDTO) {
         checkSaveOrUpdateInfo(spuDTO);
-        List<Long> skuIds = spuDTO.getSkuList().stream().filter(sku -> Objects.nonNull(sku.getSkuId())).map(SkuDTO::getSkuId).collect(Collectors.toList());
+        List<Long> skuIds = spuDTO.getSkuList().stream().map(SkuDTO::getSkuId).filter(Objects::nonNull).collect(Collectors.toList());
         spuService.update(spuDTO);
         // 清除缓存
         spuService.removeSpuCacheBySpuId(spuDTO.getSpuId());
@@ -138,7 +138,6 @@ public class SpuController {
 
     /**
      * spu上下架
-     * @param spu
      */
     private void spuUpdateStatus(SpuDTO spu) {
         SpuVO dbSpu = spuService.getBySpuId(spu.getSpuId());
@@ -152,7 +151,6 @@ public class SpuController {
 
     /**
      * spu批量上下架
-     * @param spu
      */
     private void spuBatchUpdateStatus(SpuDTO spu) {
         List<Long> spuIds = new ArrayList<>(spu.getSpuIds());
@@ -174,7 +172,7 @@ public class SpuController {
         }
         spuService.batchRemoveSpuCacheBySpuId(spuIds);
         if (errorList.size() > 0) {
-            throw new Mall4cloudException("商品id为：" + errorList.toString() + "的" + errorList.size() + "件商品不符合操作条件");
+            throw new Mall4cloudException("商品id为：" + errorList + "的" + errorList.size() + "件商品不符合操作条件");
         }
         spuService.changeSpuStatus(spu.getSpuId(), spu.getStatus());
         spuService.removeSpuCacheBySpuId(spu.getSpuId());
@@ -182,10 +180,9 @@ public class SpuController {
 
     /**
      * 加载spu属性列表
-     * @param spuVO
      */
     private void loadSpuAttrs(SpuVO spuVO) {
-        Map<Long, SpuAttrValueVO> attrMap = null;
+        Map<Long, SpuAttrValueVO> attrMap;
         if (CollUtil.isNotEmpty(spuVO.getSpuAttrValues())) {
             attrMap = spuVO.getSpuAttrValues().stream().collect(Collectors.toMap(SpuAttrValueVO::getAttrId, s -> s));
         } else {
@@ -197,10 +194,11 @@ public class SpuController {
             SpuAttrValueVO spuAttrValueVO = attrMap.get(attrVO.getAttrId());
             SpuAttrValueVO newSpuAttrValue = new SpuAttrValueVO();
             if (Objects.nonNull(spuAttrValueVO)) {
-                Boolean hasValue = false;
+                boolean hasValue = false;
                 for (AttrValueVO attrValue : attrVO.getAttrValues()) {
                     if (Objects.equals(attrValue.getAttrValueId(), spuAttrValueVO.getAttrValueId())) {
                         hasValue = true;
+                        break;
                     }
                 }
                 if (hasValue || CollUtil.isEmpty(attrVO.getAttrValues())) {
@@ -219,7 +217,6 @@ public class SpuController {
 
     /**
      * 校验spu新增或更新信息
-     * @param spuDTO
      */
     private void checkSaveOrUpdateInfo(SpuDTO spuDTO) {
         if (!Objects.equals(Constant.PLATFORM_SHOP_ID, AuthUserContext.get().getTenantId()) && Objects.isNull(spuDTO.getShopCategoryId())) {
@@ -238,8 +235,6 @@ public class SpuController {
 
     /**
      * 校验spu上下架信息
-     * @param spu
-     * @return
      */
     private String checkUpdateStatusData(SpuVO spu) {
         Long shopId = AuthUserContext.get().getTenantId();

@@ -61,8 +61,7 @@ public class IndexImgServiceImpl implements IndexImgService {
     @Override
     @Cacheable(cacheNames = CacheNames.INDEX_IMG_KEY, key = "#shopId", sync = true)
     public List<IndexImgVO> getListByShopId(Long shopId) {
-        List<IndexImgVO> listByShopId = indexImgMapper.getListByShopId(shopId);
-        return listByShopId;
+        return indexImgMapper.getListByShopId(shopId);
     }
 
     @Override

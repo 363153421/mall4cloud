@@ -20,7 +20,6 @@ public interface ShopUserAccountService {
 	/**
 	 * 更新账户
 	 * @param changeAccountDTO 账户信息
-	 * @return
 	 */
 	ServerResponseEntity<Void> update(ChangeAccountDTO changeAccountDTO);
 

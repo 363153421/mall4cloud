@@ -1,6 +1,7 @@
 package com.mall4j.cloud.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020-10-28 15:27:23
  */
+@Data
 public class AttrDTO{
     private static final long serialVersionUID = 1L;
 
@@ -39,81 +41,4 @@ public class AttrDTO{
     @Schema(description = "属性值列表" )
 	private List<AttrValueDTO> attrValues;
 
-	public Long getAttrId() {
-		return attrId;
-	}
-
-	public void setAttrId(Long attrId) {
-		this.attrId = attrId;
-	}
-
-	public Long getShopId() {
-		return shopId;
-	}
-
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public Integer getAttrType() {
-		return attrType;
-	}
-
-	public void setAttrType(Integer attrType) {
-		this.attrType = attrType;
-	}
-
-	public Integer getSearchType() {
-		return searchType;
-	}
-
-	public void setSearchType(Integer searchType) {
-		this.searchType = searchType;
-	}
-
-	public List<AttrValueDTO> getAttrValues() {
-		return attrValues;
-	}
-
-	public void setAttrValues(List<AttrValueDTO> attrValues) {
-		this.attrValues = attrValues;
-	}
-
-	public List<Long> getCategoryIds() {
-		return categoryIds;
-	}
-
-	public void setCategoryIds(List<Long> categoryIds) {
-		this.categoryIds = categoryIds;
-	}
-
-	@Override
-	public String toString() {
-		return "AttrDTO{" +
-				"attrId=" + attrId +
-				", shopId='" + shopId + '\'' +
-				", name='" + name + '\'' +
-				", desc='" + desc + '\'' +
-				", attrType=" + attrType +
-				", searchType=" + searchType +
-				", categoryIds=" + categoryIds +
-				", attrValues=" + attrValues +
-				'}';
-	}
 }

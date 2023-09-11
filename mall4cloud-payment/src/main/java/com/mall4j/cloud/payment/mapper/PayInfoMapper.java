@@ -36,7 +36,7 @@ public interface PayInfoMapper {
 	/**
 	 * 根据订单支付记录id删除订单支付记录
 	 *
-	 * @param payId
+	 * @param payId 订单支付记录id
 	 */
 	void deleteById(@Param("payId") Long payId);
 

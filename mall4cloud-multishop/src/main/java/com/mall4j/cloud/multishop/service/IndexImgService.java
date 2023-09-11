@@ -19,7 +19,7 @@ public interface IndexImgService {
 	/**
 	 * 分页获取轮播图列表
 	 * @param pageDTO 分页参数
-	 * @param indexImgDTO
+	 * @param indexImgDTO 参数
 	 * @return 轮播图列表分页数据
 	 */
 	PageVO<IndexImgVO> page(PageDTO pageDTO, IndexImgDTO indexImgDTO);
@@ -45,22 +45,22 @@ public interface IndexImgService {
 
 	/**
 	 * 根据轮播图id删除轮播图
-	 * @param imgId
-	 * @param shopId
+	 * @param imgId 轮播图id
+	 * @param shopId 商铺id
 	 */
 	void deleteById(Long imgId, Long shopId);
 
 	/**
 	 * 根据店铺id，获取轮播图列表
-	 * @param shopId
-	 * @return
+	 * @param shopId 商铺id
+	 * @return 轮播图列表
 	 */
     List<IndexImgVO> getListByShopId(Long shopId);
 
 	/**
 	 * 根据商品d删除轮播图信息
-	 * @param spuId
-	 * @param shopId
+	 * @param spuId spuId
+	 * @param shopId 商铺id
 	 */
 	void deleteBySpuId(Long spuId, Long shopId);
 }

@@ -18,7 +18,7 @@ public interface IndexImgMapper {
 
 	/**
 	 * 获取轮播图列表
-	 * @param indexImgDTO
+	 * @param indexImgDTO 参数
 	 * @return 轮播图列表
 	 */
 	List<IndexImgVO> list(@Param("indexImg") IndexImgDTO indexImgDTO);
@@ -51,14 +51,14 @@ public interface IndexImgMapper {
 
 	/**
 	 * 根据店铺id，获取轮播图列表
-	 * @param shopId
+	 * @param shopId 店铺id
 	 * @return
 	 */
     List<IndexImgVO> getListByShopId(@Param("shopId") Long shopId);
 
 	/**
 	 * 根据spuId清除轮播图的spuId
-	 * @param spuId
+	 * @param spuId spuId
 	 */
 	void clearSpuIdBySpuId(Long spuId);
 }

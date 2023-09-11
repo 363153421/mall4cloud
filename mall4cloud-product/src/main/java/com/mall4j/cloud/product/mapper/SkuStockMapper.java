@@ -33,7 +33,7 @@ public interface SkuStockMapper {
 	/**
 	 * 根据库存信息id删除库存信息
 	 *
-	 * @param stockId
+	 * @param stockId stockId
 	 */
 	void deleteById(@Param("stockId") Long stockId);
 
@@ -61,7 +61,7 @@ public interface SkuStockMapper {
 	/**
 	 * 通过sku集合获取库存信息
 	 *
-	 * @param skuVOList
+	 * @param skuVOList skuVOList
 	 * @return 库存信息
 	 */
 	List<SkuStockVO> listBySkuList(@Param("skuVOList") List<SkuVO> skuVOList);
@@ -71,7 +71,6 @@ public interface SkuStockMapper {
 	 *
 	 * @param skuId 商品id
 	 * @param count 数量
-	 * @return
 	 */
     int reduceStockByOrder(@Param("skuId") Long skuId, @Param("count") Integer count);
 

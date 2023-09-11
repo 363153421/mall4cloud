@@ -49,14 +49,14 @@ public interface ShopDetailService {
 
 	/**
 	 * 根据店铺详情id删除店铺详情
-	 * @param shopId
+	 * @param shopId 商铺id
 	 */
 	void deleteById(Long shopId);
 
     /**
      * 获取店铺列表信息
-     * @param shopIds
-     * @return
+     * @param shopIds 商铺id列表
+     * @return 店铺列表信息
      */
     List<ShopDetail> listByShopIds(List<Long> shopIds);
 
@@ -79,30 +79,30 @@ public interface ShopDetailService {
 	/**
 	 * 改变店铺状态
 	 *
-	 * @param shopId
-	 * @param shopStatus
+	 * @param shopId 商铺id
+	 * @param shopStatus 店铺状态
 	 */
 	void changeSpuStatus(Long shopId, Integer shopStatus);
 
 	/**
 	 * 删除店铺缓存
 	 *
-	 * @param shopId
+	 * @param shopId 商铺id
 	 */
 	void removeCacheByShopId(Long shopId);
 
 	/**
 	 * 获取店铺信息及扩展信息
 	 *
-	 * @param shopId
-	 * @return
+	 * @param shopId 商铺id
+	 * @return 店铺信息及扩展信息
 	 */
 	EsShopDetailBO shopExtensionData(Long shopId);
 
 	/**
 	 * 创建店铺
 	 *
-	 * @param shopDetailDTO
+	 * @param shopDetailDTO 参数
 	 */
     void createShop(ShopDetailDTO shopDetailDTO);
 
@@ -116,8 +116,8 @@ public interface ShopDetailService {
 
 	/**
 	 * 验证店铺名称是否重名
-	 * @param shopName
-	 * @return
+	 * @param shopName 店铺名
+	 * @return true:重复了,false:未重复
 	 */
     Boolean checkShopName(String shopName);
 }

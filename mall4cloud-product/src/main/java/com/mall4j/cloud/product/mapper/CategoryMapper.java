@@ -41,15 +41,15 @@ public interface CategoryMapper {
 	/**
 	 * 根据分类信息id删除分类信息
 	 *
-	 * @param categoryId
+	 * @param categoryId categoryId
 	 */
 	void deleteById(@Param("categoryId") Long categoryId);
 
 	/**
 	 * 获取分类被关联的数量
 	 *
-	 * @param categoryId
-	 * @return
+	 * @param categoryId categoryId
+	 * @return 分类被关联的数量
 	 */
 	int getCategoryUseNum(@Param("categoryId") Long categoryId);
 
@@ -57,7 +57,7 @@ public interface CategoryMapper {
 	 * 获取分类列表(未删除的分类--启用、未启用状态， 用于分类管理)
 	 *
 	 * @param shopId 店铺id 必填
-	 * @return
+	 * @return 分类列表
 	 */
 	List<CategoryVO> list(@Param("shopId") Long shopId);
 
@@ -67,57 +67,55 @@ public interface CategoryMapper {
 	 *
 	 * @param parentId 不填默认
 	 * @param shopId   店铺id 必填
-	 * @return
+	 * @return 分类列表
 	 */
 	List<CategoryVO> listByShopIdAndParenId(@Param("shopId") Long shopId, @Param("parentId") Long parentId);
 
 	/**
 	 * 根据分类id 获取分类下的子分类
 	 *
-	 * @param categoryId
-	 * @return
+	 * @param categoryId categoryId
+	 * @return 分类下的子分类
 	 */
     List<Category> getChildCategory(@Param("categoryId") Long categoryId);
 
 	/**
 	 * 批量更新分类状态（启用、禁用）
 	 *
-	 * @param categoryIds
-	 * @param status
-	 * @return
+	 * @param categoryIds categoryIds
+	 * @param status status
 	 */
 	int updateBatchOfStatus(@Param("categoryIds") List<Long> categoryIds, @Param("status") Integer status);
 
 	/**
 	 * 查询分类名是否存在
 	 *
-	 * @param category
-	 * @return
+	 * @param category category
 	 */
 	int existCategoryName(@Param("category") Category category);
 
 	/**
 	 * 根据分类id列表，获取分类列表
 	 *
-	 * @param categoryIds
-	 * @return
+	 * @param categoryIds 分类id列表
+	 * @return 分类列表
 	 */
     List<Category> getListByCategoryIds(@Param("categoryIds") Set<Long> categoryIds);
 
 	/**
 	 * 获取分类id列表
 	 * @param shopId 店铺id
-	 * @param parentId
-	 * @return
+	 * @param parentId parentId
+	 * @return 分类id列表
 	 */
 	List<Long> listCategoryId(@Param("shopId") Long shopId, @Param("parentId") Long parentId);
 
 	/**
 	 * 获取分类及子分类的数据
 	 *
-	 * @param shopId
-	 * @param parentId
-	 * @return
+	 * @param shopId 店铺id
+	 * @param parentId parentId
+	 * @return 分类及子分类的数据
 	 */
     List<CategoryVO> getCategoryAndChildCatogory(@Param("shopId") Long shopId, @Param("parentId") Long parentId);
 }

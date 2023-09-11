@@ -48,14 +48,14 @@ public interface BrandMapper {
 	/**
 	 * 根据品牌信息id删除品牌信息
 	 *
-	 * @param brandId
+	 * @param brandId brandId
 	 */
 	void deleteById(@Param("brandId") Long brandId);
 
 	/**
 	 * 获取品牌在商品中使用的数量
 	 *
-	 * @param brandId
+	 * @param brandId brandId
 	 * @return 使用该品牌的商品数量
 	 */
 	int getUseNum(@Param("brandId") Long brandId);
@@ -63,29 +63,29 @@ public interface BrandMapper {
 	/**
 	 * 根据分类id，获取品牌数据
 	 *
-	 * @param categoryId
-	 * @return
+	 * @param categoryId categoryId
+	 * @return 品牌列表
 	 */
     List<BrandVO> getBrandByCategoryId(@Param("categoryId") Long categoryId);
 
 	/**
 	 * 更新品牌状态（启用或禁用）
 	 *
-	 * @param brandDTO
+	 * @param brandDTO brandDTO
 	 */
 	void updateBrandStatus(@Param("brand") BrandDTO brandDTO);
 
 	/**
 	 * 根据分类id，获取品牌列表(分类中的推荐品牌)
 	 *
-	 * @param categoryId
-	 * @return
+	 * @param categoryId categoryId
+	 * @return 品牌列表
 	 */
     List<BrandVO> listByCategory(@Param("categoryId") Long categoryId);
 
 	/**
 	 * 获取置顶品牌列表
-	 * @return
+	 * @return 品牌列表
 	 */
 	List<BrandVO> topBrandList();
 

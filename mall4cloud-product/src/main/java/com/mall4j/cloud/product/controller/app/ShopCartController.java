@@ -57,8 +57,6 @@ public class ShopCartController {
 
     /**
      * 获取用户购物车信息
-     *
-     * @return
      */
     @GetMapping("/info")
     @Operation(summary = "获取用户购物车信息" , description = "获取用户购物车信息")
@@ -80,8 +78,6 @@ public class ShopCartController {
 
     /**
      * 获取用户购物车信息
-     *
-     * @return
      */
     @GetMapping("/amount_info")
     @Operation(summary = "获取用户购物车金额信息" , description = "获取用户购物车金额信息")
@@ -115,7 +111,7 @@ public class ShopCartController {
     }
 
     @PostMapping("/check_items")
-    @Operation(summary = "", description = "")
+    @Operation(summary = "checkItems", description = "checkItems")
     public ServerResponseEntity<Void> checkItems(@Valid @RequestBody List<CheckShopCartItemDTO> params) {
         if(CollectionUtil.isEmpty(params)) {
             return ServerResponseEntity.success();

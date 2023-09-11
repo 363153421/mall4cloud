@@ -1,9 +1,12 @@
 package com.mall4j.cloud.payment.bo;
 
+import lombok.Data;
+
 /**
  * @author wuKeFan
  * @date 2020/12/25
  */
+@Data
 public class PayInfoBO {
 
     /**
@@ -36,63 +39,4 @@ public class PayInfoBO {
      */
     private String bizUserId;
 
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
-
-    public Long getPayId() {
-        return payId;
-    }
-
-    public void setPayId(Long payId) {
-        this.payId = payId;
-    }
-
-    public Long getPayAmount() {
-        return payAmount;
-    }
-
-    public void setPayAmount(Long payAmount) {
-        this.payAmount = payAmount;
-    }
-
-    public String getApiNoticeUrl() {
-        return apiNoticeUrl;
-    }
-
-    public void setApiNoticeUrl(String apiNoticeUrl) {
-        this.apiNoticeUrl = apiNoticeUrl;
-    }
-
-    public String getReturnUrl() {
-        return returnUrl;
-    }
-
-    public void setReturnUrl(String returnUrl) {
-        this.returnUrl = returnUrl;
-    }
-
-    public String getBizUserId() {
-        return bizUserId;
-    }
-
-    public void setBizUserId(String bizUserId) {
-        this.bizUserId = bizUserId;
-    }
-
-    @Override
-    public String toString() {
-        return "PayInfoBO{" +
-                "body='" + body + '\'' +
-                ", payId='" + payId + '\'' +
-                ", payAmount=" + payAmount +
-                ", apiNoticeUrl='" + apiNoticeUrl + '\'' +
-                ", returnUrl='" + returnUrl + '\'' +
-                ", bizUserId='" + bizUserId + '\'' +
-                '}';
-    }
 }

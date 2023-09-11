@@ -34,8 +34,6 @@ import io.seata.spring.annotation.GlobalTransactional;
 import ma.glasnost.orika.MapperFacade;
 import org.apache.rocketmq.client.producer.SendStatus;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Service;
@@ -54,7 +52,6 @@ import java.util.Objects;
  */
 @Service
 public class OrderServiceImpl implements OrderService {
-    private static final Logger log = LoggerFactory.getLogger(OrderServiceImpl.class);
 
 
     @Autowired
@@ -123,6 +120,7 @@ public class OrderServiceImpl implements OrderService {
             for (OrderStatusBO orderStatusBO : orderStatusList) {
                 if (Objects.equals(orderStatusBO.getOrderId(), orderId)) {
                     hasOrderId = true;
+                    break;
                 }
             }
             if (!hasOrderId) {

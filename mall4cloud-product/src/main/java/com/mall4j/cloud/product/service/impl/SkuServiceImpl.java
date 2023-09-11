@@ -158,7 +158,7 @@ public class SkuServiceImpl implements SkuService {
     public void updateAmountOrStock(SpuDTO spuDTO) {
         List<SkuDTO> skuList = spuDTO.getSkuList();
         List<Sku> skus = new ArrayList<>();
-        Boolean isUpdateStock = false;
+        boolean isUpdateStock = false;
         for (SkuDTO skuDTO : skuList) {
             if (Objects.nonNull(skuDTO.getChangeStock())  && skuDTO.getChangeStock() > 0) {
                 isUpdateStock = true;
@@ -187,9 +187,9 @@ public class SkuServiceImpl implements SkuService {
         List<SkuVO> skuData = skuMapper.getSkuBySpuId(spuId);
         for (SkuVO sku : skuData) {
             SkuAppVO skuAppVO = mapperFacade.map(sku, SkuAppVO.class);
-            String properties = "";
+            StringBuilder properties = new StringBuilder();
             for (SpuSkuAttrValueVO spuSkuAttrValue : sku.getSpuSkuAttrValues()) {
-                properties = properties + spuSkuAttrValue.getAttrName() + attrUnionAttrValue + spuSkuAttrValue.getAttrValueName() + attrUnionAttr;
+                properties.append(spuSkuAttrValue.getAttrName()).append(attrUnionAttrValue).append(spuSkuAttrValue.getAttrValueName()).append(attrUnionAttr);
             }
             skuAppVO.setProperties(properties.substring(0, properties.length()-1));
             skuAppList.add(skuAppVO);

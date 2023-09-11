@@ -132,8 +132,8 @@ public class CategoryServiceImpl implements CategoryService {
             }
             String[] parentIdArray = category.getPath().split(Constant.CATEGORY_INTERVAL);
             category.setPathNames(new ArrayList<>());
-            for (int i = 0; i < parentIdArray.length; i++) {
-                String pathName = categoryMap.get(Long.valueOf(parentIdArray[i])).getName();
+            for (String s : parentIdArray) {
+                String pathName = categoryMap.get(Long.valueOf(s)).getName();
                 category.getPathNames().add(pathName);
             }
         }
@@ -215,7 +215,7 @@ public class CategoryServiceImpl implements CategoryService {
     /**
      * 校验分类名是否已存在
      *
-     * @param category
+     * @param category category
      */
     private void existCategoryName(Category category) {
         category.setShopId(AuthUserContext.get().getTenantId());

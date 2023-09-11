@@ -53,14 +53,14 @@ public interface HotSearchService {
 
 	/**
 	 * 获取热搜列表
-	 * @param shopId
-	 * @return
+	 * @param shopId 商铺id
+	 * @return 热搜列表
 	 */
 	List<HotSearchVO> listByShopId(Long shopId);
 
 	/**
 	 * 清除热搜列表缓存
-	 * @param shopId
+	 * @param shopId 商铺id
 	 */
 	void removeHotSearchListCache(Long shopId);
 }

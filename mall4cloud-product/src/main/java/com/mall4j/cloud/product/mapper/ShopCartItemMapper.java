@@ -47,7 +47,7 @@ public interface ShopCartItemMapper {
 	/**
 	 * 根据购物车id删除购物车
 	 *
-	 * @param cartItemId
+	 * @param cartItemId cartItemId
 	 */
 	void deleteById(@Param("cartItemId") Long cartItemId);
 

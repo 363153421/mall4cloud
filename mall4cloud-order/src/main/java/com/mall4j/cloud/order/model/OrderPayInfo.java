@@ -1,6 +1,8 @@
 package com.mall4j.cloud.order.model;
 
 import com.mall4j.cloud.common.model.BaseModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,6 +12,8 @@ import java.util.Date;
  * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class OrderPayInfo extends BaseModel implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -63,101 +67,4 @@ public class OrderPayInfo extends BaseModel implements Serializable{
      */
     private Date confirmTime;
 
-	public Long getPayId() {
-		return payId;
-	}
-
-	public void setPayId(Long payId) {
-		this.payId = payId;
-	}
-
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getBizPayNo() {
-		return bizPayNo;
-	}
-
-	public void setBizPayNo(String bizPayNo) {
-		this.bizPayNo = bizPayNo;
-	}
-
-	public Integer getSysType() {
-		return sysType;
-	}
-
-	public void setSysType(Integer sysType) {
-		this.sysType = sysType;
-	}
-
-	public Integer getPayStatus() {
-		return payStatus;
-	}
-
-	public void setPayStatus(Integer payStatus) {
-		this.payStatus = payStatus;
-	}
-
-	public Long getPayAmount() {
-		return payAmount;
-	}
-
-	public void setPayAmount(Long payAmount) {
-		this.payAmount = payAmount;
-	}
-
-	public Integer getVersion() {
-		return version;
-	}
-
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
-
-	public String getCallbackContent() {
-		return callbackContent;
-	}
-
-	public void setCallbackContent(String callbackContent) {
-		this.callbackContent = callbackContent;
-	}
-
-	public Date getCallbackTime() {
-		return callbackTime;
-	}
-
-	public void setCallbackTime(Date callbackTime) {
-		this.callbackTime = callbackTime;
-	}
-
-	public Date getConfirmTime() {
-		return confirmTime;
-	}
-
-	public void setConfirmTime(Date confirmTime) {
-		this.confirmTime = confirmTime;
-	}
-
-	@Override
-	public String toString() {
-		return "OrderPayInfo{" +
-				"payId=" + payId +
-				",createTime=" + createTime +
-				",updateTime=" + updateTime +
-				",userId=" + userId +
-				",bizPayNo=" + bizPayNo +
-				",sysType=" + sysType +
-				",payStatus=" + payStatus +
-				",payAmount=" + payAmount +
-				",version=" + version +
-				",callbackContent=" + callbackContent +
-				",callbackTime=" + callbackTime +
-				",confirmTime=" + confirmTime +
-				'}';
-	}
 }

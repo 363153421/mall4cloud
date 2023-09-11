@@ -1,6 +1,7 @@
 package com.mall4j.cloud.platform.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020/9/8
  */
+@Data
 public class SysUserDTO {
 
     @Schema(description = "平台用户id" )
@@ -31,63 +33,4 @@ public class SysUserDTO {
     @Schema(description = "角色id列表" )
     private List<Long> roleIds;
 
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
-
-    public Long getSysUserId() {
-        return sysUserId;
-    }
-
-    public void setSysUserId(Long sysUserId) {
-        this.sysUserId = sysUserId;
-    }
-
-    public List<Long> getRoleIds() {
-        return roleIds;
-    }
-
-    public void setRoleIds(List<Long> roleIds) {
-        this.roleIds = roleIds;
-    }
-
-    @Override
-    public String toString() {
-        return "SysUserDTO{" +
-                "sysUserId=" + sysUserId +
-                ", nickName='" + nickName + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", code='" + code + '\'' +
-                ", phoneNum='" + phoneNum + '\'' +
-                ", roleIds=" + roleIds +
-                '}';
-    }
 }

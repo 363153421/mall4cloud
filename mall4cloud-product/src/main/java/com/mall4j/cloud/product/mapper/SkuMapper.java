@@ -32,7 +32,7 @@ public interface SkuMapper {
 	/**
 	 * 根据sku信息id删除sku信息
 	 *
-	 * @param skuId
+	 * @param skuId skuId
 	 */
 	void deleteById(@Param("skuId") Long skuId);
 
@@ -47,7 +47,7 @@ public interface SkuMapper {
 	/**
 	 * 批量保存
 	 *
-	 * @param skuList
+	 * @param skuList skuList
 	 */
 	void saveBatch(@Param("skuList") List<SkuDTO> skuList);
 
@@ -68,24 +68,22 @@ public interface SkuMapper {
 	/**
 	 * 获取商品详细信息
 	 *
-	 * @param spuId
-	 * @return
+	 * @param spuId spuId
+	 * @return 商品详细信息
 	 */
 	List<SkuVO> listBySpuIdAndExtendInfo(@Param("spuId") Long spuId);
 
 	/**
 	 * 根据skuid获取sku信息
 	 *
-	 * @param skuId
-	 * @return
+	 * @param skuId spuId
 	 */
 	SkuVO getSkuBySkuId(@Param("skuId") Long skuId);
 
 	/**
 	 * 获取商品的sku列表（仅获取启用状态）
 	 *
-	 * @param spuId
-	 * @return
+	 * @param spuId spuId
 	 */
 	List<SkuVO> getSkuBySpuId(@Param("spuId") Long spuId);
 }

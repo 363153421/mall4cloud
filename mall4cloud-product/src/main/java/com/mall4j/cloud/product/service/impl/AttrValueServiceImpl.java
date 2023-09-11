@@ -4,7 +4,6 @@ import cn.hutool.core.collection.CollUtil;
 import com.mall4j.cloud.api.product.vo.AttrVO;
 import com.mall4j.cloud.api.product.vo.AttrValueVO;
 import com.mall4j.cloud.product.constant.AttrType;
-import com.mall4j.cloud.product.mapper.AttrMapper;
 import com.mall4j.cloud.product.mapper.AttrValueMapper;
 import com.mall4j.cloud.product.model.Attr;
 import com.mall4j.cloud.product.model.AttrValue;
@@ -32,9 +31,6 @@ public class AttrValueServiceImpl implements AttrValueService {
 
     @Autowired
     private AttrValueMapper attrValueMapper;
-
-    @Autowired
-    private AttrMapper attrMapper;
 
     @Autowired
     private SpuAttrValueService spuAttrValueService;
@@ -85,8 +81,8 @@ public class AttrValueServiceImpl implements AttrValueService {
     /**
      * 更新属性数据时，更新商品/sku中的属性数据
      * 若不需要同步更新商品/sku中的属性数据，在更新属性数据时，不调用该方法即可，不影响其他流程
-     * @param updateAttrValue
-     * @param dbAttr
+     * @param updateAttrValue updateAttrValue
+     * @param dbAttr dbAttr
      */
     private void updateAttrAndAttrValueOfSpuOrSku(List<AttrValue> updateAttrValue, Attr attr, AttrVO dbAttr) {
         if (CollUtil.isEmpty(updateAttrValue)) {

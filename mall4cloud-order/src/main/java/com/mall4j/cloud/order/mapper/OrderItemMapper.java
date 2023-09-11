@@ -30,7 +30,7 @@ public interface OrderItemMapper {
 	/**
 	 * 根据订单项id删除订单项
 	 *
-	 * @param orderItemId
+	 * @param orderItemId 订单项id
 	 */
 	void deleteById(@Param("orderItemId") Long orderItemId);
 
@@ -59,8 +59,8 @@ public interface OrderItemMapper {
 
 	/**
 	 * 根据订单id获取订单项数量
-	 * @param orderId
-	 * @return
+	 * @param orderId 订单id
+	 * @return 订单项数量
 	 */
 	Integer countByOrderId(@Param("orderId") Long orderId);
 

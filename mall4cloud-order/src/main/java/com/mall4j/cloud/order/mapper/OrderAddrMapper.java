@@ -41,7 +41,7 @@ public interface OrderAddrMapper {
 
 	/**
 	 * 根据用户订单配送地址id删除用户订单配送地址
-	 * @param orderAddrId
+	 * @param orderAddrId 收货地址id
 	 */
 	void deleteById(@Param("orderAddrId") Long orderAddrId);
 }

@@ -1,6 +1,7 @@
 package com.mall4j.cloud.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
+@Data
 public class BrandDTO{
     private static final long serialVersionUID = 1L;
 
@@ -43,81 +45,4 @@ public class BrandDTO{
 	@Schema(description = "分类" )
 	private List<Long> categoryIds;
 
-	public Long getBrandId() {
-		return brandId;
-	}
-
-	public void setBrandId(Long brandId) {
-		this.brandId = brandId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public String getImgUrl() {
-		return imgUrl;
-	}
-
-	public void setImgUrl(String imgUrl) {
-		this.imgUrl = imgUrl;
-	}
-
-	public String getFirstLetter() {
-		return firstLetter;
-	}
-
-	public void setFirstLetter(String firstLetter) {
-		this.firstLetter = firstLetter;
-	}
-
-	public Integer getSeq() {
-		return seq;
-	}
-
-	public void setSeq(Integer seq) {
-		this.seq = seq;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public List<Long> getCategoryIds() {
-		return categoryIds;
-	}
-
-	public void setCategoryIds(List<Long> categoryIds) {
-		this.categoryIds = categoryIds;
-	}
-
-	@Override
-	public String toString() {
-		return "BrandDTO{" +
-				"brandId=" + brandId +
-				", name='" + name + '\'' +
-				", desc='" + desc + '\'' +
-				", imgUrl='" + imgUrl + '\'' +
-				", firstLetter='" + firstLetter + '\'' +
-				", seq=" + seq +
-				", status=" + status +
-				", categoryIds=" + categoryIds +
-				'}';
-	}
 }

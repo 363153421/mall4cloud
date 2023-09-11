@@ -19,7 +19,7 @@ public interface AttrService {
 	/**
 	 * 分页获取属性信息列表
 	 * @param pageDTO 分页参数
-	 * @param attrDTO
+	 * @param attrDTO attrDTO
 	 * @return 属性信息列表分页数据
 	 */
 	PageVO<AttrVO> page(PageDTO pageDTO, AttrDTO attrDTO);
@@ -48,21 +48,21 @@ public interface AttrService {
 
 	/**
 	 * 根据属性信息id删除属性信息
-	 * @param attrId
+	 * @param attrId attrId
 	 */
 	void deleteById(Long attrId);
 
 	/**
 	 * 根据分类和属性类型，获取对应的属性列表
-	 * @param categoryId
-	 * @return
+	 * @param categoryId categoryId
+	 * @return 属性列表
 	 */
 	List<AttrVO> getAttrsByCategoryIdAndAttrType(Long categoryId);
 
 	/**
 	 * 根据属性id获取属性下的分类id列表
-	 * @param attrId
-	 * @return
+	 * @param attrId attrId
+	 * @return 分类id列表
 	 */
 	List<Long> getAttrOfCategoryIdByAttrId(Long attrId);
 
@@ -74,8 +74,7 @@ public interface AttrService {
 
 	/**
 	 * 获取店铺中的销售属性
-	 * @param shopId
-	 * @return
+	 * @param shopId shopId
 	 */
 	List<AttrVO> getShopAttrs(Long shopId);
 }

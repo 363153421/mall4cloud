@@ -9,14 +9,13 @@ import com.mall4j.cloud.api.rbac.constant.HttpMethodEnum;
 import com.mall4j.cloud.api.rbac.feign.PermissionFeignClient;
 import com.mall4j.cloud.common.constant.Auth;
 import com.mall4j.cloud.common.feign.FeignInsideAuthConfig;
+import com.mall4j.cloud.common.handler.HttpHandler;
 import com.mall4j.cloud.common.response.ResponseEnum;
 import com.mall4j.cloud.common.response.ServerResponseEntity;
 import com.mall4j.cloud.common.security.AuthUserContext;
-import com.mall4j.cloud.common.handler.HttpHandler;
 import com.mall4j.cloud.common.security.adapter.AuthConfigAdapter;
 import com.mall4j.cloud.common.util.IpHelper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
@@ -34,10 +33,9 @@ import java.util.Objects;
  * @author wuKeFan
  * @date 2023-09-06 13:58:52
  */
+@Slf4j
 @Component
 public class AuthFilter implements Filter {
-
-    private static Logger logger = LoggerFactory.getLogger(AuthFilter.class);
 
     @Autowired
     private AuthConfigAdapter authConfigAdapter;
@@ -137,7 +135,7 @@ public class AuthFilter implements Filter {
         // 有ip白名单，且ip不在白名单内，校验失败
         if (CollectionUtil.isNotEmpty(ips)
                 && !ips.contains(IpHelper.getIpAddr())) {
-            logger.error("ip not in ip White list: {}, ip, {}", ips, IpHelper.getIpAddr());
+            log.error("ip not in ip White list: {}, ip, {}", ips, IpHelper.getIpAddr());
             return false;
         }
         return true;

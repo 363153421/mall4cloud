@@ -51,7 +51,7 @@ public interface ShopDetailMapper {
 	/**
 	 * 根据店铺详情id删除店铺详情
 	 *
-	 * @param shopId
+	 * @param shopId 店铺id
 	 */
 	void deleteById(@Param("shopId") Long shopId);
 
@@ -65,16 +65,16 @@ public interface ShopDetailMapper {
 	/**
 	 * 店铺搜索列表
 	 *
-	 * @param shopDetailDTO
-	 * @return
+	 * @param shopDetailDTO 参数
+	 * @return 店铺搜索列表
 	 */
 	List<ShopDetailAppVO> shopSearchList(@Param("shopDetail") ShopDetailDTO shopDetailDTO);
 
 	/**
 	 * 统计该店铺名被其他用户使用的数量
 	 *
-	 * @param shopName
-	 * @param shopId
+	 * @param shopName 店铺名
+	 * @param shopId 店铺id
 	 * @return
 	 */
     int countShopName(@Param("shopName") String shopName, @Param("shopId") Long shopId);
@@ -82,16 +82,16 @@ public interface ShopDetailMapper {
 	/**
 	 * 改变店铺状态
 	 *
-	 * @param shopId
-	 * @param shopStatus
+	 * @param shopId 店铺id
+	 * @param shopStatus 店铺状态
 	 */
 	void changeSpuStatus(@Param("shopId") Long shopId, @Param("shopStatus") Integer shopStatus);
 
 	/**
 	 * 获取店铺信息及扩展信息
 	 *
-	 * @param shopId
-	 * @return
+	 * @param shopId 店铺id
+	 * @return 店铺及扩展信息
 	 */
 	EsShopDetailBO shopExtensionData(@Param("shopId") Long shopId);
 

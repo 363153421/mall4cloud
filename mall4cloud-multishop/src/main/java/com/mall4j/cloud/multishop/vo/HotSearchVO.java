@@ -2,6 +2,8 @@ package com.mall4j.cloud.multishop.vo;
 
 import com.mall4j.cloud.common.vo.BaseVO;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * 热搜VO
@@ -9,6 +11,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * @author wuKeFan
  * @date 2021-01-27 09:10:00
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class HotSearchVO extends BaseVO{
     private static final long serialVersionUID = 1L;
 
@@ -30,63 +34,4 @@ public class HotSearchVO extends BaseVO{
     @Schema(description = "热搜标题" )
     private String title;
 
-	public Long getHotSearchId() {
-		return hotSearchId;
-	}
-
-	public void setHotSearchId(Long hotSearchId) {
-		this.hotSearchId = hotSearchId;
-	}
-
-	public Long getShopId() {
-		return shopId;
-	}
-
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public Integer getSeq() {
-		return seq;
-	}
-
-	public void setSeq(Integer seq) {
-		this.seq = seq;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	@Override
-	public String toString() {
-		return "HotSearchVO{" +
-				"hotSearchId=" + hotSearchId +
-				",shopId=" + shopId +
-				",content=" + content +
-				",seq=" + seq +
-				",status=" + status +
-				",title=" + title +
-				'}';
-	}
 }

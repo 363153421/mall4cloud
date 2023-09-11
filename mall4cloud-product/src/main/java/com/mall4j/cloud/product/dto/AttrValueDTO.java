@@ -1,6 +1,7 @@
 package com.mall4j.cloud.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 /**
  * 属性值信息DTO
@@ -8,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
+@Data
 public class AttrValueDTO{
     private static final long serialVersionUID = 1L;
 
@@ -20,36 +22,4 @@ public class AttrValueDTO{
     @Schema(description = "属性值" )
     private String value;
 
-	public Long getAttrValueId() {
-		return attrValueId;
-	}
-
-	public void setAttrValueId(Long attrValueId) {
-		this.attrValueId = attrValueId;
-	}
-
-	public Long getAttrId() {
-		return attrId;
-	}
-
-	public void setAttrId(Long attrId) {
-		this.attrId = attrId;
-	}
-
-	public String getValue() {
-		return value;
-	}
-
-	public void setValue(String value) {
-		this.value = value;
-	}
-
-	@Override
-	public String toString() {
-		return "AttrValueDTO{" +
-				"attrValueId=" + attrValueId +
-				",attrId=" + attrId +
-				",value=" + value +
-				'}';
-	}
 }

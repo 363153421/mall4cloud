@@ -7,8 +7,7 @@ import com.mall4j.cloud.leaf.segment.dao.IDAllocDao;
 import com.mall4j.cloud.leaf.segment.model.LeafAlloc;
 import com.mall4j.cloud.leaf.segment.model.Segment;
 import com.mall4j.cloud.leaf.segment.model.SegmentBuffer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import java.security.SecureRandom;
 import java.util.*;
@@ -18,9 +17,8 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * @author wuKeFan
  */
+@Slf4j
 public class SegmentIDGenImpl implements IDGen {
-
-	private static final Logger logger = LoggerFactory.getLogger(SegmentIDGenImpl.class);
 
 	/**
 	 * IDCache未初始化成功时的异常码
@@ -77,7 +75,7 @@ public class SegmentIDGenImpl implements IDGen {
 
 	@Override
 	public boolean init() {
-		logger.info("Init ...");
+		log.info("Init ...");
 		// 确保加载到kv后才初始化成功
 		updateCacheFromDb();
 		initOk = true;
@@ -86,36 +84,27 @@ public class SegmentIDGenImpl implements IDGen {
 	}
 
 	private void updateCacheFromDbAtEveryMinute() {
-		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
-			@Override
-			public Thread newThread(Runnable r) {
-				Thread t = new Thread(r);
-				t.setName("check-idCache-thread");
-				t.setDaemon(true);
-				return t;
-			}
+		ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor(r -> {
+			Thread t = new Thread(r);
+			t.setName("check-idCache-thread");
+			t.setDaemon(true);
+			return t;
 		});
-		service.scheduleWithFixedDelay(new Runnable() {
-			@Override
-			public void run() {
-				updateCacheFromDb();
-			}
-		}, 60, 60, TimeUnit.SECONDS);
+		service.scheduleWithFixedDelay(this::updateCacheFromDb, 60, 60, TimeUnit.SECONDS);
 	}
 
 	private void updateCacheFromDb() {
-		logger.info("update cache from db");
+		log.info("update cache from db");
 		try {
 			List<String> dbTags = dao.getAllTags();
 			if (dbTags == null || dbTags.isEmpty()) {
 				return;
 			}
-			List<String> cacheTags = new ArrayList<String>(cache.keySet());
+			List<String> cacheTags = new ArrayList<>(cache.keySet());
 			Set<String> insertTagsSet = new HashSet<>(dbTags);
 			Set<String> removeTagsSet = new HashSet<>(cacheTags);
 			// db中新加的tags灌进cache
-			for (int i = 0; i < cacheTags.size(); i++) {
-				String tmp = cacheTags.get(i);
+			for (String tmp : cacheTags) {
 				insertTagsSet.remove(tmp);
 			}
 			for (String tag : insertTagsSet) {
@@ -126,20 +115,19 @@ public class SegmentIDGenImpl implements IDGen {
 				segment.setMax(0);
 				segment.setStep(0);
 				cache.put(tag, buffer);
-				logger.info("Add tag {} from db to IdCache, SegmentBuffer {}", tag, buffer);
+				log.info("Add tag {} from db to IdCache, SegmentBuffer {}", tag, buffer);
 			}
 			// cache中已失效的tags从cache删除
-			for (int i = 0; i < dbTags.size(); i++) {
-				String tmp = dbTags.get(i);
+			for (String tmp : dbTags) {
 				removeTagsSet.remove(tmp);
 			}
 			for (String tag : removeTagsSet) {
 				cache.remove(tag);
-				logger.info("Remove tag {} from IdCache", tag);
+				log.info("Remove tag {} from IdCache", tag);
 			}
 		}
 		catch (Exception e) {
-			logger.warn("update cache from db exception", e);
+			log.warn("update cache from db exception", e);
 		}
 	}
 
@@ -155,11 +143,11 @@ public class SegmentIDGenImpl implements IDGen {
 					if (buffer.isInitOk()) {
 						try {
 							updateSegmentFromDb(key, buffer.getCurrent());
-							logger.info("Init buffer. Update leafkey {} {} from db", key, buffer.getCurrent());
+							log.info("Init buffer. Update leafkey {} {} from db", key, buffer.getCurrent());
 							buffer.setInitOk(true);
 						}
 						catch (Exception e) {
-							logger.warn("Init buffer {} exception", buffer.getCurrent(), e);
+							log.warn("Init buffer {} exception", buffer.getCurrent(), e);
 						}
 					}
 				}
@@ -203,7 +191,7 @@ public class SegmentIDGenImpl implements IDGen {
 				nextStep = nextStep / DEFAULT_LOAD_FACTOR >= buffer.getMinStep() ? nextStep / DEFAULT_LOAD_FACTOR
 						: nextStep;
 			}
-			logger.info("leafKey[{}], step[{}], duration[{}mins], nextStep[{}]", key, buffer.getStep(),
+			log.info("leafKey[{}], step[{}], duration[{}mins], nextStep[{}]", key, buffer.getStep(),
 					String.format("%.2f", ((double) duration / (1000 * 60))), nextStep);
 			LeafAlloc temp = new LeafAlloc();
 			temp.setKey(key);
@@ -229,29 +217,26 @@ public class SegmentIDGenImpl implements IDGen {
 				final Segment segment = buffer.getCurrent();
 				if (!buffer.isNextReady() && (segment.getIdle() < 0.9 * segment.getStep())
 						&& buffer.getThreadRunning().compareAndSet(false, true)) {
-					service.execute(new Runnable() {
-						@Override
-						public void run() {
-							Segment next = buffer.getSegments()[buffer.nextPos()];
-							boolean updateOk = false;
-							try {
-								updateSegmentFromDb(buffer.getKey(), next);
-								updateOk = true;
-								logger.info("update segment {} from db {}", buffer.getKey(), next);
+					service.execute(() -> {
+						Segment next = buffer.getSegments()[buffer.nextPos()];
+						boolean updateOk = false;
+						try {
+							updateSegmentFromDb(buffer.getKey(), next);
+							updateOk = true;
+							log.info("update segment {} from db {}", buffer.getKey(), next);
+						}
+						catch (Exception e) {
+							log.warn(buffer.getKey() + " updateSegmentFromDb exception", e);
+						}
+						finally {
+							if (updateOk) {
+								buffer.wLock().lock();
+								buffer.setNextReady(true);
+								buffer.getThreadRunning().set(false);
+								buffer.wLock().unlock();
 							}
-							catch (Exception e) {
-								logger.warn(buffer.getKey() + " updateSegmentFromDb exception", e);
-							}
-							finally {
-								if (updateOk) {
-									buffer.wLock().lock();
-									buffer.setNextReady(true);
-									buffer.getThreadRunning().set(false);
-									buffer.wLock().unlock();
-								}
-								else {
-									buffer.getThreadRunning().set(false);
-								}
+							else {
+								buffer.getThreadRunning().set(false);
 							}
 						}
 					});
@@ -286,7 +271,7 @@ public class SegmentIDGenImpl implements IDGen {
 					buffer.setNextReady(false);
 				}
 				else {
-					logger.error("Both two segments in {} are not ready!", buffer);
+					log.error("Both two segments in {} are not ready!", buffer);
 					return new Result(EXCEPTION_ID_TWO_SEGMENTS_ARE_NULL, Status.EXCEPTION);
 				}
 			}
@@ -310,7 +295,7 @@ public class SegmentIDGenImpl implements IDGen {
 					break;
 				}
 				catch (InterruptedException e) {
-					logger.warn("Thread {} Interrupted, Exception: {}", Thread.currentThread().getName(), e);
+					log.warn("Thread {} Interrupted, Exception: {}", Thread.currentThread().getName(), e);
 					break;
 				}
 			}

@@ -21,7 +21,7 @@ public interface SpuMapper {
 	/**
 	 * 获取spu信息列表
 	 *
-	 * @param spu
+	 * @param spu spu
 	 * @return spu信息列表
 	 */
 	List<SpuVO> list(@Param("spu") SpuPageSearchDTO spu);
@@ -51,7 +51,7 @@ public interface SpuMapper {
 	/**
 	 * 根据spu信息id删除spu信息
 	 *
-	 * @param spuId
+	 * @param spuId spuId
 	 */
 	void deleteById(@Param("spuId") Long spuId);
 
@@ -65,7 +65,7 @@ public interface SpuMapper {
 	/**
 	 * 根据spuId获取商品信息（搜索）
 	 *
-	 * @param spuId
+	 * @param spuId spuId
 	 * @return 商品信息
 	 */
 	EsProductBO loadEsProductBO(@Param("spuId") Long spuId);
@@ -85,16 +85,16 @@ public interface SpuMapper {
 	/**
 	 * 改变商品状态（上下架）
 	 *
-	 * @param spuId
-	 * @param status
+	 * @param spuId spuId
+	 * @param status status
 	 */
 	void changeSpuStatus(@Param("spuId") Long spuId, @Param("status") Integer status);
 
 	/**
 	 * 更新spu表（canal监听后，会发送更新的消息，更新es中的数据）
 	 *
-	 * @param spuIds
-	 * @param categoryIds
+	 * @param spuIds spuIds
+	 * @param categoryIds categoryIds
 	 */
     void updateSpuUpdateTime(@Param("spuIds") List<Long> spuIds, @Param("categoryIds") List<Long> categoryIds);
 
@@ -118,17 +118,17 @@ public interface SpuMapper {
 
 	/**
 	 * 根据分类id列表批量获取商品id列表
-	 * @param cidList
-	 * @param type
-	 * @param shopId
-	 * @return
+	 * @param cidList cidList
+	 * @param type type
+	 * @param shopId shopId
+	 * @return 商品id列表
 	 */
     List<Long> listIdsByCidListAndTypeAndShopId(@Param("cidList") List<Long> cidList, @Param("type") int type, @Param("shopId") Long shopId);
 
 	/**
 	 * 根据商品id列表与状态批量修改商品状态
-	 * @param spuIdList
-	 * @param status
+	 * @param spuIdList spuIdList
+	 * @param status status
 	 */
 	void batchChangeSpuStatusBySpuIdsAndStatus(@Param("spuIdList") List<Long> spuIdList, @Param("status") Integer status);
 }

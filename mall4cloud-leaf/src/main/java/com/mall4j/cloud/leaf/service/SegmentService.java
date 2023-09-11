@@ -6,6 +6,7 @@ import com.mall4j.cloud.leaf.exception.InitException;
 import com.mall4j.cloud.leaf.segment.SegmentIDGenImpl;
 import com.mall4j.cloud.leaf.segment.dao.IDAllocDao;
 import com.mall4j.cloud.leaf.segment.dao.impl.IDAllocDaoImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -15,10 +16,9 @@ import javax.sql.DataSource;
 /**
  * @author wuKeFan
  */
+@Slf4j
 @Service("SegmentService")
 public class SegmentService {
-
-	private final Logger logger = LoggerFactory.getLogger(SegmentService.class);
 
 	private final IDGen idGen;
 
@@ -30,7 +30,7 @@ public class SegmentService {
 		idGen = new SegmentIDGenImpl();
 		((SegmentIDGenImpl) idGen).setDao(dao);
 		if (idGen.init()) {
-			logger.info("Segment Service Init Successfully");
+			log.info("Segment Service Init Successfully");
 		}
 		else {
 			throw new InitException("Segment Service Init Fail");

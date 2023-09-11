@@ -37,7 +37,7 @@ public interface SpuSkuAttrValueMapper {
 	/**
 	 * 根据商品sku销售属性关联信息id删除商品sku销售属性关联信息
 	 *
-	 * @param spuSkuAttrId
+	 * @param spuSkuAttrId spuSkuAttrId
 	 */
 	void deleteById(@Param("spuSkuAttrId") Long spuSkuAttrId);
 
@@ -51,14 +51,14 @@ public interface SpuSkuAttrValueMapper {
 	/**
 	 * 修改商品规格信息
 	 *
-	 * @param spuId
+	 * @param spuId spuId
 	 */
 	void updateBySpuId(@Param("spuId") Long spuId);
 
 	/**
 	 * 根据skuId列表，改变销售属性状态
-	 * @param skuIds
-	 * @param status
+	 * @param skuIds skuIds
+	 * @param status status
 	 */
     void changeStatusBySkuId(@Param("skuIds") List<Long> skuIds, @Param("status") Integer status);
 }

@@ -161,7 +161,7 @@ public class OrderController {
             totalCount += shopCart.getTotalCount();
             shopCartOrder.setTotal(shopCart.getTotal());
             shopCartOrder.setTotalCount(shopCart.getTotalCount());
-            shopCartOrder.setShopCartItemVO(shopCart.getshopCartItem());
+            shopCartOrder.setShopCartItemVO(shopCart.getShopCartItem());
             shopCartOrders.add(shopCartOrder);
         }
         shopCartOrderMerger.setTotal(total);

@@ -17,7 +17,7 @@ public class IpHelper {
     /**
      * 得到用户的真实地址,如果有多个就取第一个
      *
-     * @return
+     * @return IP地址
      */
     public static String getIpAddr() {
         if (RequestContextHolder.getRequestAttributes() == null) {

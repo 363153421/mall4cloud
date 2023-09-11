@@ -17,7 +17,7 @@ public enum PayStatus {
     PAYED(1)
     ;
 
-    private Integer num;
+    private final Integer num;
 
     public Integer value() {
         return num;

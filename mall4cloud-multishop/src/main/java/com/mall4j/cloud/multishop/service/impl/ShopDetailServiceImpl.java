@@ -214,7 +214,7 @@ public class ShopDetailServiceImpl implements ShopDetailService {
 
     /**
      * 检验店铺信息是否正确
-     * @param shopDetailDTO
+     * @param shopDetailDTO 参数
      */
     private void checkShopInfo(ShopDetailDTO shopDetailDTO) {
         // 店铺名称
@@ -244,8 +244,8 @@ public class ShopDetailServiceImpl implements ShopDetailService {
 
     /**
      * 创建店铺初始账号
-     * @param shopDetailDTO
-     * @param statusEnum
+     * @param shopDetailDTO 参数
+     * @param statusEnum 状态枚举
      */
     public void createShopAccount(ShopDetailDTO shopDetailDTO, StatusEnum statusEnum) {
         ShopUser shopUser = new ShopUser();

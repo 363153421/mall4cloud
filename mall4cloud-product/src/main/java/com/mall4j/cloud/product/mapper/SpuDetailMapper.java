@@ -25,7 +25,7 @@ public interface SpuDetailMapper {
 
 	/**
 	 * 根据商品详情信息id删除商品详情信息
-	 * @param spuId
+	 * @param spuId spuId
 	 */
 	void deleteById(@Param("spuId") Long spuId);
 

@@ -108,7 +108,7 @@ public class ShopCartAdapter {
             // 构建每个店铺的购物车信息
             ShopCartVO shopCart = buildShopCart(shopId,shopCartMap.get(shopId));
             shopCart.setShopId(shopId);
-            shopCart.setshopCartItem(shopCartMap.get(shopId));
+            shopCart.setShopCartItem(shopCartMap.get(shopId));
             // 店铺信息
             ServerResponseEntity<String> shopNameResponse = shopDetailFeignClient.getShopNameByShopId(shopId);
             if (!shopNameResponse.isSuccess()) {

@@ -106,7 +106,7 @@ public class BrandServiceImpl implements BrandService {
         if (CollUtil.isEmpty(categoryIds)) {
             return;
         }
-        Set categoryIdSet = new HashSet<>(categoryIds);
+        Set<Long> categoryIdSet = new HashSet<>(categoryIds);
         RedisUtil.deleteBatch(CacheNames.BRAND_LIST_BY_CATEGORY, new ArrayList<>(categoryIdSet));
     }
 

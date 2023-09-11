@@ -40,8 +40,8 @@ public interface AttrCategoryMapper {
 	/**
 	 * 据属性Id，获取属性关联的分类列表信息
 	 *
-	 * @param attrId
-	 * @return
+	 * @param attrId 属性Id
+	 * @return 属性关联的分类列表信息
 	 */
     List<CategoryVO> listByAttrId(@Param("attrId") Long attrId);
 }

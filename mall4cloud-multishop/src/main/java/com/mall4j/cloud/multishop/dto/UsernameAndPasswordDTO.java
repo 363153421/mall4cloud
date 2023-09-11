@@ -1,6 +1,7 @@
 package com.mall4j.cloud.multishop.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -9,6 +10,7 @@ import javax.validation.constraints.Size;
  * @author wuKeFan
  * @date 2020/12/30
  */
+@Data
 @Schema(description = "用户名和密码参数")
 public class UsernameAndPasswordDTO {
 
@@ -25,36 +27,4 @@ public class UsernameAndPasswordDTO {
     @Schema(description = "店铺id" )
     private Long shopId;
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Long getShopId() {
-        return shopId;
-    }
-
-    public void setShopId(Long shopId) {
-        this.shopId = shopId;
-    }
-
-    @Override
-    public String toString() {
-        return "UsernameAndPasswordDTO{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", shopId='" + shopId +
-                '}';
-    }
 }

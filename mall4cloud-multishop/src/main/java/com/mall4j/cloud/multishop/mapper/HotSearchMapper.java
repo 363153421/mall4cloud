@@ -48,16 +48,16 @@ public interface HotSearchMapper {
 	/**
 	 * 根据热搜id删除热搜
 	 *
-	 * @param hotSearchId
-	 * @param shopId
+	 * @param hotSearchId 热词搜索id
+	 * @param shopId 店铺id
 	 */
 	void deleteById(@Param("hotSearchId") Long hotSearchId, @Param("shopId") Long shopId);
 
 	/**
 	 * 根据店铺id获取热搜列表
 	 *
-	 * @param shopId
-	 * @return
+	 * @param shopId 店铺id
+	 * @return 热搜列表
 	 */
     List<HotSearchVO> listByShopId(@Param("shopId") Long shopId);
 }

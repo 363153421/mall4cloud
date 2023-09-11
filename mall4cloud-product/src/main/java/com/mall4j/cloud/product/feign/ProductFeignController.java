@@ -65,7 +65,7 @@ public class ProductFeignController implements ProductFeignClient {
      * @param categoryIds 平台分类Id列表
      * @param brandId 品牌id
      * @param shopId 店铺id
-     * @return
+     * @return spuId列表
      */
     public ServerResponseEntity<List<Long>> getSpuIdsBySpuUpdateDTO(List<Long> shopCategoryIds, List<Long> categoryIds, Long brandId, Long shopId) {
         List<Long> spuIds = spuService.getSpuIdsBySpuUpdateDTO(shopCategoryIds, categoryIds, brandId, shopId);

@@ -3,11 +3,14 @@ package com.mall4j.cloud.platform.vo;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.mall4j.cloud.common.serializer.ImgJsonSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author wuKeFan
  * @date 2020/9/2
  */
+@Data
 public class SysUserSimpleVO {
 
 	/**
@@ -24,38 +27,5 @@ public class SysUserSimpleVO {
 	private String avatar;
 
 	private Integer isAdmin;
-
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
-
-	public Integer getIsAdmin() {
-		return isAdmin;
-	}
-
-	public void setIsAdmin(Integer isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-
-	@Override
-	public String toString() {
-		return "SysUserSimpleVO{" +
-				"nickName='" + nickName + '\'' +
-				", avatar='" + avatar + '\'' +
-				", isAdmin=" + isAdmin +
-				'}';
-	}
 
 }

@@ -91,10 +91,10 @@ public class Json {
     }
 
     /**
-     * *
-     * https://stackoverflow.com/questions/6349421/how-to-use-jackson-to-deserialise-an-array-of-objects
-     * * List<MyClass> myObjects = Arrays.asList(mapper.readValue(json, MyClass[].class))
-     * * works up to 10 time faster than TypeRefence.
+     *
+     * 参考地址:<a href="https://stackoverflow.com/questions/6349421/how-to-use-jackson-to-deserialise-an-array-of-objects">...</a>
+     * List<MyClass> myObjects = Arrays.asList(mapper.readValue(json, MyClass[].class))
+     * works up to 10 time faster than TypeRefence.
      * @return List数组
      */
     public static <T> List<T> parseArray(String json, Class<T[]> clazz) {

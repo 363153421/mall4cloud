@@ -18,7 +18,7 @@ public interface AuthConfigAdapter {
 
 	/**
 	 * 不需要授权登陆的路径
-	 * @param paths
+	 * @param paths 路径列表
 	 * @return 不需要授权登陆的路径列表
 	 */
 	List<String> excludePathPatterns(String... paths);

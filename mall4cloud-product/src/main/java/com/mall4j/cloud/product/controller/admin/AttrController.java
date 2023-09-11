@@ -113,7 +113,6 @@ public class AttrController {
 
     /**
      * 校验属性数据
-     * @param attrDTO
      */
     private void checkAttrInfo(AttrDTO attrDTO) {
         if (!Objects.equals(Constant.PLATFORM_SHOP_ID, AuthUserContext.get().getTenantId())) {

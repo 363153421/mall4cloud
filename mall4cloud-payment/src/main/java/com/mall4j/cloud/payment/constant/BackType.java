@@ -21,7 +21,7 @@ public enum BackType {
     PLATFORM(2)
     ;
 
-    private Integer num;
+    private final Integer num;
 
     public Integer value() {
         return num;

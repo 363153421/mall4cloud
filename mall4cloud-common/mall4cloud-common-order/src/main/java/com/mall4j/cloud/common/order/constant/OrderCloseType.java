@@ -24,7 +24,7 @@ public enum OrderCloseType {
     DELIVERY(15),
     ;
 
-    private Integer code;
+    private final Integer code;
 
     public Integer value() {
         return code;

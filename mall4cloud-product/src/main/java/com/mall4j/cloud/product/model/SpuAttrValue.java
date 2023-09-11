@@ -1,6 +1,8 @@
 package com.mall4j.cloud.product.model;
 
 import com.mall4j.cloud.common.model.BaseModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
@@ -10,6 +12,8 @@ import java.io.Serializable;
  * @author wuKeFan
  * @date 2020-10-28 15:27:24
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class SpuAttrValue extends BaseModel implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -48,71 +52,4 @@ public class SpuAttrValue extends BaseModel implements Serializable{
 	 */
 	private String attrDesc;
 
-	public Long getSpuAttrValueId() {
-		return spuAttrValueId;
-	}
-
-	public void setSpuAttrValueId(Long spuAttrValueId) {
-		this.spuAttrValueId = spuAttrValueId;
-	}
-
-	public Long getSpuId() {
-		return spuId;
-	}
-
-	public void setSpuId(Long spuId) {
-		this.spuId = spuId;
-	}
-
-	public Long getAttrId() {
-		return attrId;
-	}
-
-	public void setAttrId(Long attrId) {
-		this.attrId = attrId;
-	}
-
-	public String getAttrName() {
-		return attrName;
-	}
-
-	public void setAttrName(String attrName) {
-		this.attrName = attrName;
-	}
-
-	public Long getAttrValueId() {
-		return attrValueId;
-	}
-
-	public void setAttrValueId(Long attrValueId) {
-		this.attrValueId = attrValueId;
-	}
-
-	public String getAttrValueName() {
-		return attrValueName;
-	}
-
-	public void setAttrValueName(String attrValueName) {
-		this.attrValueName = attrValueName;
-	}
-
-	public String getAttrDesc() {
-		return attrDesc;
-	}
-
-	public void setAttrDesc(String attrDesc) {
-		this.attrDesc = attrDesc;
-	}
-
-	@Override
-	public String toString() {
-		return "SpuAttrValue{" +
-				"spuAttrValueId=" + spuAttrValueId +
-				",spuId=" + spuId +
-				",attrId=" + attrId +
-				",attrName=" + attrName +
-				",attrValueId=" + attrValueId +
-				",attrValueName=" + attrValueName +
-				'}';
-	}
 }

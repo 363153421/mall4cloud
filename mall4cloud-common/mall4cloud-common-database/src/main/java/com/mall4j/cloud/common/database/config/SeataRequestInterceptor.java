@@ -19,8 +19,6 @@ import org.springframework.stereotype.Component;
 @ConditionalOnClass({RequestInterceptor.class, GlobalTransactional.class})
 public class SeataRequestInterceptor implements RequestInterceptor {
 
-    private static final Logger logger = LoggerFactory.getLogger(SeataRequestInterceptor.class);
-
     @Override
     public void apply(RequestTemplate template) {
         String currentXid = RootContext.getXID();

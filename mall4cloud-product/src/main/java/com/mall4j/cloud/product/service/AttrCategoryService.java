@@ -21,16 +21,16 @@ public interface AttrCategoryService {
 
 	/**
 	 * 更新属性与属性分组关联信息
-	 * @param attrId
-	 * @param categoryId
+	 * @param attrId attrId
+	 * @param categoryId categoryId
 	 * @return
 	 */
 	List<Long> update(Long attrId, List<Long> categoryId);
 
 	/**
 	 * 根据属性Id，获取属性关联的分类列表信息
-	 * @param attrId
-	 * @return
+	 * @param attrId attrId
+	 * @return 分类列表信息
 	 */
     List<CategoryVO> listByAttrId(Long attrId);
 }

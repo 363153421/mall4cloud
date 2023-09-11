@@ -1,6 +1,8 @@
 package com.mall4j.cloud.product.model;
 
 import com.mall4j.cloud.common.model.BaseModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -11,6 +13,8 @@ import java.util.Date;
  * @author wuKeFan
  * @date 2020-11-11 13:49:06
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class SpuExtension extends BaseModel implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -54,65 +58,4 @@ public class SpuExtension extends BaseModel implements Serializable{
      */
     private Integer stock;
 
-	public Long getSpuExtendId() {
-		return spuExtendId;
-	}
-
-	public void setSpuExtendId(Long spuExtendId) {
-		this.spuExtendId = spuExtendId;
-	}
-
-	public Long getSpuId() {
-		return spuId;
-	}
-
-	public void setSpuId(Long spuId) {
-		this.spuId = spuId;
-	}
-
-	public Integer getSaleNum() {
-		return saleNum;
-	}
-
-	public void setSaleNum(Integer saleNum) {
-		this.saleNum = saleNum;
-	}
-
-	public Integer getActualStock() {
-		return actualStock;
-	}
-
-	public void setActualStock(Integer actualStock) {
-		this.actualStock = actualStock;
-	}
-
-	public Integer getLockStock() {
-		return lockStock;
-	}
-
-	public void setLockStock(Integer lockStock) {
-		this.lockStock = lockStock;
-	}
-
-	public Integer getStock() {
-		return stock;
-	}
-
-	public void setStock(Integer stock) {
-		this.stock = stock;
-	}
-
-	@Override
-	public String toString() {
-		return "SpuExtension{" +
-				"spuExtendId=" + spuExtendId +
-				",createTime=" + createTime +
-				",updateTime=" + updateTime +
-				",spuId=" + spuId +
-				",saleNum=" + saleNum +
-				",actualStock=" + actualStock +
-				",lockStock=" + lockStock +
-				",stock=" + stock +
-				'}';
-	}
 }

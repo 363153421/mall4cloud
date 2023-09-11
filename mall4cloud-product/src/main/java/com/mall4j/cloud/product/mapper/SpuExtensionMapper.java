@@ -25,14 +25,11 @@ public interface SpuExtensionMapper {
 	 * 根据id获取
 	 *
 	 * @param spuExtendId id
-	 * @return
 	 */
 	SpuExtensionVO getBySpuExtendId(@Param("spuExtendId") Long spuExtendId);
 
 	/**
 	 * 保存
-	 *
-	 * @param spuExtension
 	 */
 	void save(@Param("spuExtension") SpuExtension spuExtension);
 
@@ -56,7 +53,6 @@ public interface SpuExtensionMapper {
 	 *
 	 * @param spuId 商品id
 	 * @param count 数量
-	 * @return
 	 */
 	int reduceStockByOrder(@Param("spuId") Long spuId, @Param("count") Integer count);
 
@@ -83,8 +79,8 @@ public interface SpuExtensionMapper {
 
 	/**
 	 * 获取spu扩展信息
-	 * @param spuId
-	 * @return
+	 * @param spuId spuId
+	 * @return spu扩展信息
 	 */
     SpuExtension getBySpuId(Long spuId);
 }

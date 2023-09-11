@@ -1,6 +1,7 @@
 package com.mall4j.cloud.platform.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import javax.validation.constraints.NotNull;
  * @author wuKeFan
  * @date 2020/12/22
  */
+@Data
 public class ChangeAccountDTO {
 
     @NotNull(message = "userId not null")
@@ -27,45 +29,4 @@ public class ChangeAccountDTO {
     @Schema(description = "状态 1启用 0禁用" )
     private Integer status;
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "ChangeAccountDTO{" +
-                "userId=" + userId +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", status=" + status +
-                '}';
-    }
 }

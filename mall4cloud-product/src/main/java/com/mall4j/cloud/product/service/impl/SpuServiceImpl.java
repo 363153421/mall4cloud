@@ -68,9 +68,6 @@ public class SpuServiceImpl implements SpuService {
     private SkuService skuService;
 
     @Autowired
-    private BrandService brandService;
-
-    @Autowired
     private CategoryService categoryService;
 
     @Autowired
@@ -81,8 +78,7 @@ public class SpuServiceImpl implements SpuService {
 
     @Override
     public PageVO<SpuVO> page(PageDTO pageDTO, SpuPageSearchDTO spuDTO) {
-        PageVO<SpuVO> spuPage = PageUtil.doPage(pageDTO, () -> spuMapper.list(spuDTO));
-        return spuPage;
+        return PageUtil.doPage(pageDTO, () -> spuMapper.list(spuDTO));
     }
 
     @Override
@@ -94,8 +90,7 @@ public class SpuServiceImpl implements SpuService {
     @Override
     @Cacheable(cacheNames = CacheNames.SPU_EXTENSION_KEY, key = "#spuId",sync = true)
     public SpuExtension getSpuExtension(Long spuId) {
-        SpuExtension spuExtension = spuExtensionService.getBySpuId(spuId);
-        return spuExtension;
+        return spuExtensionService.getBySpuId(spuId);
     }
     @Override
     @Caching(evict = {
@@ -115,7 +110,7 @@ public class SpuServiceImpl implements SpuService {
     @GlobalTransactional(rollbackFor = Exception.class)
     public void changeSpuStatus(Long spuId, Integer status) {
         spuMapper.changeSpuStatus(spuId, status);
-        if (!Objects.equals(status, StatusEnum.ENABLE)) {
+        if (!Objects.equals(status, StatusEnum.ENABLE.value())) {
             SpuVO spuVO = spuMapper.getBySpuId(spuId);
             ServerResponseEntity<Void> imgRes = indexImgFeignClient.deleteBySpuId(spuVO.getSpuId(), spuVO.getShopId());
             if (!imgRes.isSuccess()) {

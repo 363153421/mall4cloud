@@ -1,6 +1,8 @@
 package com.mall4j.cloud.product.model;
 
 import com.mall4j.cloud.common.model.BaseModel;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 import java.util.List;
@@ -11,6 +13,8 @@ import java.util.List;
  * @author wuKeFan
  * @date 2020-10-28 15:27:23
  */
+@Data
+@EqualsAndHashCode(callSuper=true)
 public class Attr extends BaseModel implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -50,74 +54,4 @@ public class Attr extends BaseModel implements Serializable{
 	 */
 	private List<AttrValue> attrValues;
 
-	public Long getAttrId() {
-		return attrId;
-	}
-
-	public void setAttrId(Long attrId) {
-		this.attrId = attrId;
-	}
-
-	public Long getShopId() {
-		return shopId;
-	}
-
-	public void setShopId(Long shopId) {
-		this.shopId = shopId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDesc() {
-		return desc;
-	}
-
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
-
-	public Integer getSearchType() {
-		return searchType;
-	}
-
-	public void setSearchType(Integer searchType) {
-		this.searchType = searchType;
-	}
-
-	public Integer getAttrType() {
-		return attrType;
-	}
-
-	public void setAttrType(Integer attrType) {
-		this.attrType = attrType;
-	}
-
-	public List<AttrValue> getAttrValues() {
-		return attrValues;
-	}
-
-	public void setAttrValues(List<AttrValue> attrValues) {
-		this.attrValues = attrValues;
-	}
-
-	@Override
-	public String toString() {
-		return "Attr{" +
-				"attrId=" + attrId +
-				", shopId='" + shopId + '\'' +
-				", name='" + name + '\'' +
-				", desc='" + desc + '\'' +
-				", searchType=" + searchType +
-				", attrType=" + attrType +
-				", attrValues=" + attrValues +
-				", createTime=" + createTime +
-				", updateTime=" + updateTime +
-				'}';
-	}
 }

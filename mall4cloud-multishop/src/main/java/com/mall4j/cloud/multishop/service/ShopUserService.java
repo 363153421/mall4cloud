@@ -52,8 +52,7 @@ public interface ShopUserService {
 
 	/**
 	 * 获取店主账号的用户id-第一个创建的账号（仅用于审核店铺）
-	 * @param shopId
-	 * @return
+	 * @param shopId 商铺id
 	 */
 	Long getUserIdByShopId(Long shopId);
 }

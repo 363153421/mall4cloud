@@ -2,6 +2,7 @@ package com.mall4j.cloud.order.dto.app;
 
 import com.mall4j.cloud.api.product.dto.ShopCartItemDTO;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotNull;
  * @author wuKeFan
  * @date 2020-12-04 11:27:35
  */
+@Data
 public class OrderDTO {
 
     @Schema(description = "立即购买时提交的商品项,如果该值为空，则说明是从购物车进入，如果该值不为空则说明为立即购买" )
@@ -24,36 +26,4 @@ public class OrderDTO {
     @NotNull(message = "地址不能为空")
     private Long addrId;
 
-    public Integer getDvyType() {
-        return dvyType;
-    }
-
-    public void setDvyType(Integer dvyType) {
-        this.dvyType = dvyType;
-    }
-
-    public ShopCartItemDTO getShopCartItem() {
-        return shopCartItem;
-    }
-
-    public void setShopCartItem(ShopCartItemDTO shopCartItem) {
-        this.shopCartItem = shopCartItem;
-    }
-
-    public Long getAddrId() {
-        return addrId;
-    }
-
-    public void setAddrId(Long addrId) {
-        this.addrId = addrId;
-    }
-
-    @Override
-    public String toString() {
-        return "OrderDTO{" +
-                "shopCartItem=" + shopCartItem +
-                ", dvyType=" + dvyType +
-                ", addrId=" + addrId +
-                '}';
-    }
 }

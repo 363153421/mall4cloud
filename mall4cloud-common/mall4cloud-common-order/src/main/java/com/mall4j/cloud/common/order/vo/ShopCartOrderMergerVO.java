@@ -1,6 +1,7 @@
 package com.mall4j.cloud.common.order.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  * "/confirm" 使用
  * @author wuKeFan
  */
+@Data
 public class ShopCartOrderMergerVO {
 
     @Schema(description = "商品总值" , required = true)
@@ -29,64 +31,4 @@ public class ShopCartOrderMergerVO {
     @Schema(description = "用户地址" )
     private UserAddrVO userAddr;
 
-
-    public Long getTotal() {
-        return total;
-    }
-
-    public void setTotal(Long total) {
-        this.total = total;
-    }
-
-    public Integer getTotalCount() {
-        return totalCount;
-    }
-
-    public void setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-    }
-
-    public Integer getDvyType() {
-        return dvyType;
-    }
-
-    public void setDvyType(Integer dvyType) {
-        this.dvyType = dvyType;
-    }
-
-    public List<ShopCartOrderVO> getShopCartOrders() {
-        return shopCartOrders;
-    }
-
-    public void setShopCartOrders(List<ShopCartOrderVO> shopCartOrders) {
-        this.shopCartOrders = shopCartOrders;
-    }
-
-    public List<ShopCartItemVO> getFilterShopItems() {
-        return filterShopItems;
-    }
-
-    public void setFilterShopItems(List<ShopCartItemVO> filterShopItems) {
-        this.filterShopItems = filterShopItems;
-    }
-
-    public UserAddrVO getUserAddr() {
-        return userAddr;
-    }
-
-    public void setUserAddr(UserAddrVO userAddr) {
-        this.userAddr = userAddr;
-    }
-
-    @Override
-    public String toString() {
-        return "ShopCartOrderMergerVO{" +
-                "total=" + total +
-                ", totalCount=" + totalCount +
-                ", dvyType=" + dvyType +
-                ", filterShopItems=" + filterShopItems +
-                ", shopCartOrders=" + shopCartOrders +
-                ", userAddr=" + userAddr +
-                '}';
-    }
 }

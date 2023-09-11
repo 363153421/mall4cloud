@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
+ * 支付配置、文件上传配置、短信配置、快递配置、小程序配置、公众号配置
+ *
  * @author wuKeFan
- * @DateTime: 2020/3/19 8:29
- * @description: 支付配置、文件上传配置、短信配置、快递配置、小程序配置、公众号配置
+ * @date 2020/3/19 8:29
  */
 @RestController
 @RequestMapping("/sys_config")

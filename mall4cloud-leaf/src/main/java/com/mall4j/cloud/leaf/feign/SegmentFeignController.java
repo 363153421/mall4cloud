@@ -7,8 +7,6 @@ import com.mall4j.cloud.leaf.common.Status;
 import com.mall4j.cloud.leaf.exception.LeafServerException;
 import com.mall4j.cloud.leaf.exception.NoKeyException;
 import com.mall4j.cloud.leaf.service.SegmentService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,8 +19,6 @@ import java.util.Objects;
  */
 @RestController
 public class SegmentFeignController implements SegmentFeignClient {
-
-	private static final Logger logger = LoggerFactory.getLogger(SegmentFeignController.class);
 
 
 	@Autowired

@@ -46,7 +46,7 @@ public interface SkuStockLockMapper {
 	/**
 	 * 根据库存锁定信息id删除库存锁定信息
 	 *
-	 * @param id
+	 * @param id id
 	 */
 	void deleteById(@Param("id") Long id);
 

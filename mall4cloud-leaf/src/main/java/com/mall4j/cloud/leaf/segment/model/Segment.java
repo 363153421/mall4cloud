@@ -1,10 +1,13 @@
 package com.mall4j.cloud.leaf.segment.model;
 
+import lombok.Data;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author wuKeFan
  */
+@Data
 public class Segment {
 
 	private AtomicLong value = new AtomicLong(0);
@@ -19,34 +22,6 @@ public class Segment {
 
 	public Segment(SegmentBuffer buffer) {
 		this.buffer = buffer;
-	}
-
-	public AtomicLong getValue() {
-		return value;
-	}
-
-	public void setValue(AtomicLong value) {
-		this.value = value;
-	}
-
-	public long getMax() {
-		return max;
-	}
-
-	public void setMax(long max) {
-		this.max = max;
-	}
-
-	public int getStep() {
-		return step;
-	}
-
-	public void setStep(int step) {
-		this.step = step;
-	}
-
-	public SegmentBuffer getBuffer() {
-		return buffer;
 	}
 
 	public long getIdle() {
@@ -64,12 +39,5 @@ public class Segment {
 				")";
 	}
 
-	public int getRandomStep() {
-		return randomStep;
-	}
-
-	public void setRandomStep(int randomStep) {
-		this.randomStep = randomStep;
-	}
 
 }

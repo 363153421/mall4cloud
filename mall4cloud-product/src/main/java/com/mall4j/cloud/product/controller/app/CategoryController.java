@@ -42,7 +42,7 @@ public class CategoryController {
 
     @GetMapping("/shop_category_list")
     @Operation(summary = "店铺/平台的全部分类列表接口" , description = "店铺/平台分类列表接口")
-    @Parameter(name = "shopId", description = "店铺id", required = false)
+    @Parameter(name = "shopId", description = "店铺id")
     public ServerResponseEntity<List<CategoryVO>> shopCategoryList(@RequestParam(value = "shopId", defaultValue = "0") Long shopId) {
         List<CategoryVO> categories = categoryService.shopCategoryList(shopId);
         return ServerResponseEntity.success(categories);

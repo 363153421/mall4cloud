@@ -27,8 +27,8 @@ public interface AttrMapper {
 	/**
 	 * 获取属性总数
 	 *
-	 * @param attrDTO
-	 * @return
+	 * @param attrDTO 参数
+	 * @return 属性总数
 	 */
 	Long countAttr(@Param("attr") AttrDTO attrDTO);
 
@@ -57,21 +57,21 @@ public interface AttrMapper {
 	/**
 	 * 根据属性信息id删除属性信息
 	 *
-	 * @param attrId
+	 * @param attrId 属性信息id
 	 */
 	void deleteById(@Param("attrId") Long attrId);
 
 	/**
 	 * 根据分类和属性类型，获取对应的属性列表
 	 *
-	 * @param categoryId
-	 * @return
+	 * @param categoryId 分类id
+	 * @return 属性列表
 	 */
 	List<AttrVO> getAttrsByCategoryIdAndAttrType(@Param("categoryId") Long categoryId);
 
 	/**
 	 * 获取店铺中的销售属性
-	 * @param shopId
+	 * @param shopId 店铺id
 	 * @return 销售属性列表
 	 */
 	List<AttrVO> getShopAttrs(Long shopId);
