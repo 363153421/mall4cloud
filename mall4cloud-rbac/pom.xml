@@ -9,10 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mall4j.cloud.rbac</groupId>
     <artifactId>mall4cloud-rbac</artifactId>
-
+    <packaging>jar</packaging>
     <description>mall4cloud 用户角色权限模块</description>
+
     <dependencies>
         <!--注册中心客户端-->
         <dependency>
