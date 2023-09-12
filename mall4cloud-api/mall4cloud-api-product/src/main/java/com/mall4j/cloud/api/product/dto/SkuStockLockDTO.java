@@ -2,6 +2,7 @@ package com.mall4j.cloud.api.product.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotNull;
  * @date 2020/12/22
  */
 @Data
+@NoArgsConstructor
 public class SkuStockLockDTO {
 
     @NotNull(message = "产品ID不能为空")

@@ -32,7 +32,7 @@ public class UserApiVO extends BaseVO{
     @Schema(description = "是否创建过店铺" )
 
 	/**
-	 * openId list
+	 * openId 列表
 	 */
 	private List<String> bizUserIdList;
 
