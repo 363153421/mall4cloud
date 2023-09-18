@@ -2,10 +2,12 @@ package com.mall4j.cloud.biz.util;
 
 import io.minio.*;
 import io.minio.errors.*;
+import io.minio.messages.Bucket;
 
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 /**
  * minio工具类
@@ -103,6 +105,15 @@ public class MinioUtil {
                                 "{\"Version\":\"2012-10-17\",\"Statement\":[]}"
                         )
                         .build());
+    }
+
+    /**
+     * 查询存储桶信息列表
+     */
+    public static List<Bucket> listBuckets(String url, String accessKey, String secretKey) throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException {
+        MinioClient minioClient = MinioClient.builder().endpoint(url)
+                .credentials(accessKey, secretKey).build();
+        return minioClient.listBuckets();
     }
 
 }
