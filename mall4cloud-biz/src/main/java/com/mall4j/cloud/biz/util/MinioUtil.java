@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 /**
- * minio工具类
+ * minio存储桶工具类
  *
  * @author wuKeFan
  * @date 2023-09-08 14:08:10

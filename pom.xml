@@ -55,6 +55,7 @@
         <rocketmq-springboot.version>2.2.2</rocketmq-springboot.version>
         <weixin.version>4.0.0</weixin.version>
         <spring-javaformat.version>0.0.22</spring-javaformat.version>
+        <commons-io.version>2.11.0</commons-io.version>
     </properties>
 
     <dependencyManagement>
