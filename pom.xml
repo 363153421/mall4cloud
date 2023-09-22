@@ -270,7 +270,7 @@
                 <!-- 环境标识，需要与配置文件的名称相对应 -->
                 <profiles.active>dev</profiles.active>
                 <!--https://github.com/alibaba/nacos/issues/3460  默认的命名空间不要去设置namespace -->
-                <nacos.namespace/>
+                <nacos.namespace>a127518d-0c5e-4927-bd35-a3c3e0607cdc</nacos.namespace>
             </properties>
             <activation>
                 <!-- 默认环境 -->
